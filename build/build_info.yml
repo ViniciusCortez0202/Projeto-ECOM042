@@ -1,0 +1,58 @@
+cmake:
+  application:
+    configuration-dir: '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto'
+    source-dir: '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto'
+  board:
+    name: 'mps2'
+    path:
+     - '/Users/viniciuscortez/zephyrproject/zephyr/boards/arm/mps2'
+    qualifiers: 'an385'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/Users/viniciuscortez/zephyrproject/zephyr/boards/arm/mps2/mps2_an385.dts'
+    include-dirs:
+     - '/Users/viniciuscortez/zephyrproject/modules/hal/ambiq/dts'
+     - '/Users/viniciuscortez/zephyrproject/modules/hal/atmel/include'
+     - '/Users/viniciuscortez/zephyrproject/modules/hal/bouffalolab/include'
+     - '/Users/viniciuscortez/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/Users/viniciuscortez/zephyrproject/modules/hal/gigadevice/include'
+     - '/Users/viniciuscortez/zephyrproject/modules/hal/microchip/include'
+     - '/Users/viniciuscortez/zephyrproject/modules/hal/microchip/dts'
+     - '/Users/viniciuscortez/zephyrproject/modules/hal/nuvoton/dts'
+     - '/Users/viniciuscortez/zephyrproject/modules/hal/nxp/dts'
+     - '/Users/viniciuscortez/zephyrproject/modules/hal/stm32/dts'
+     - '/Users/viniciuscortez/zephyrproject/modules/hal/ti/dts'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/include'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/include/zephyr'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/common'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/vendor'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/rx'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/x86'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/xtensa'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/sparc'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/riscv'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/posix'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/arm64'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/arm'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts/arc'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - '/Users/viniciuscortez/zephyrproject/zephyr/boards/arm/mps2/mps2_an385_defconfig'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/prj.conf'
+    user-files:
+     - '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/Users/viniciuscortez/zephyr-sdk-0.17.1'
+  zephyr:
+    version: '4.1.99'
+    zephyr-base: '/Users/viniciuscortez/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/Users/viniciuscortez/miniconda3/bin/west build -b mps2/an385 .'
+  topdir: '/Users/viniciuscortez/zephyrproject'
+  version: '1.5.0'

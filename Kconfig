@@ -1,0 +1,29 @@
+source "Kconfig.zephyr"
+
+menu "Radar Eletrônico"
+
+config RADAR_SENSOR_DISTANCE_MM
+    int "Distância entre sensores (mm)"
+    default 1000
+    help
+      Distância em milímetros entre os dois sensores magnéticos.
+
+config RADAR_SPEED_LIMIT_LIGHT_KMH
+    int "Limite de velocidade para veículos leves (km/h)"
+    default 80
+
+config RADAR_SPEED_LIMIT_HEAVY_KMH
+    int "Limite de velocidade para veículos pesados (km/h)"
+    default 60
+
+config RADAR_WARNING_THRESHOLD_PERCENT
+    int "Percentual para zona de alerta (%)"
+    default 90
+    range 1 100
+
+config RADAR_CAMERA_FAILURE_RATE_PERCENT
+    int "Chance de falha da câmera (%)"
+    default 10
+    range 0 100
+
+endmenu

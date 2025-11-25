@@ -5,45 +5,63 @@
 
 LOG_MODULE_DECLARE(radar);
 
-/* Thread that simulates vehicles generating pulses */
-static void sensor_sim_thread(void *a, void *b, void *c)
+#define AXLE_GAP_MS            3
+#define BETWEEN_VEHICLES_S     5
+#define VEHICLE_END_SILENCE_MS 600
+
+static void pulse_sensor(uint8_t sensor_id)
 {
-    ARG_UNUSED(a);
-    ARG_UNUSED(b);
-    ARG_UNUSED(c);
-
-    LOG_INF("Sensor simulation thread started");
-
-    while (1) {
-        /* Example: simulate a LIGHT vehicle (2 axles on sensor 1 + pass on sensor 2) */
-
-        LOG_INF("Simulating LIGHT vehicle...");
-
-        /* Axle 1 on sensor 1 */
-        sensor_send_event(1, 1);
-        k_sleep(K_MSEC(10));
-        sensor_send_event(1, 0);
-
-        /* Axle 2 on sensor 1 */
-        k_sleep(K_MSEC(20));
-        sensor_send_event(1, 1);
-        k_sleep(K_MSEC(10));
-        sensor_send_event(1, 0);
-
-        /* Vehicle reaches sensor 2 (second loop) */
-        k_sleep(K_MSEC(50));
-        sensor_send_event(2, 1);
-        k_sleep(K_MSEC(10));
-        sensor_send_event(2, 0);
-
-        /* Wait some time before next vehicle */
-        k_sleep(K_SECONDS(2));
-    }
+	sensor_send_event(sensor_id, 1);
 }
 
-/* Create the simulation thread */
-K_THREAD_DEFINE(sensor_sim_thread_id,
-                1024,
-                sensor_sim_thread,
-                NULL, NULL, NULL,
-                6, 0, 0);
+static void emit_vehicle(uint8_t axles, uint32_t travel_ms)
+{
+	for (uint8_t i = 0; i < axles; i++) {
+		pulse_sensor(1);
+		k_msleep(travel_ms);
+		pulse_sensor(2);
+	}
+
+	k_msleep(VEHICLE_END_SILENCE_MS);
+}
+
+static void sensor_sim_thread(void *a, void *b, void *c)
+{
+	ARG_UNUSED(a);
+	ARG_UNUSED(b);
+	ARG_UNUSED(c);
+
+	while (1) {
+		// Veiculo leve normal
+		emit_vehicle(2, 120);
+
+		K_MSEC(BETWEEN_VEHICLES_S);
+
+		// Veiculo leve com atenção
+		emit_vehicle(2, 40);
+
+		K_MSEC(BETWEEN_VEHICLES_S);
+
+		// Veiculo leve com infração
+		emit_vehicle(2, 20);
+
+		K_MSEC(BETWEEN_VEHICLES_S);
+
+		// Veiculo pesado normal
+		emit_vehicle(3, 120);
+
+		K_MSEC(BETWEEN_VEHICLES_S);
+
+		// Veiculo pesado  com atenção
+		emit_vehicle(3, 50);
+
+		K_MSEC(BETWEEN_VEHICLES_S);
+
+		// Veiculo pesado  com infração
+		emit_vehicle(3, 20);
+
+		K_MSEC(BETWEEN_VEHICLES_S);
+	}
+}
+
+K_THREAD_DEFINE(sensor_sim_thread_id, 1024, sensor_sim_thread, NULL, NULL, NULL, 6, 0, 0);

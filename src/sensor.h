@@ -3,18 +3,15 @@
 
 #include <stdint.h>
 
-/**
- * Initialize sensor hardware (GPIO + interrupts).
- *
- * @return 0 on success, negative errno on failure.
- */
+struct sensor_event {
+    uint8_t sensor_id;     // 1 or 2
+    uint8_t level;         // 0 or 1
+    uint32_t timestamp_ms; // k_uptime_get_32()
+};
+
 int sensor_init(void);
 
-/**
- * Send a sensor event into the internal queue.
- *
- * This is used both by the real GPIO ISR and by the simulator.
- */
+
 void sensor_send_event(uint8_t sensor_id, uint8_t level);
 
 #endif /* RADAR_SENSOR_H */

@@ -4,26 +4,21 @@
 #include <errno.h>
 
 #include "sensor.h"
+#include "radar_processing.h"
 
-/* Use the same log module as main.c */
 LOG_MODULE_DECLARE(radar);
 
+// Define pinos do GPIO
 #define SENSOR_GPIO_NODE DT_NODELABEL(gpio0)
 #define SENSOR1_PIN      5
 #define SENSOR2_PIN      6
 
-struct sensor_event {
-    uint8_t sensor_id;     // 1 or 2
-    uint8_t level;         // 0 or 1
-    uint32_t timestamp_ms; // k_uptime_get_32()
-};
-
-/* Queue to pass events from ISR / simulator to sensor thread */
+//Fila de mensagem para comunicação do GIOP
 K_MSGQ_DEFINE(sensor_msgq, sizeof(struct sensor_event), 16, 4);
 
-/* GPIO device + callback (for real GPIO path) */
 static const struct device *sensor_gpio_dev = DEVICE_DT_GET(SENSOR_GPIO_NODE);
 static struct gpio_callback sensor_cb;
+
 
 void sensor_send_event(uint8_t sensor_id, uint8_t level)
 {
@@ -32,12 +27,11 @@ void sensor_send_event(uint8_t sensor_id, uint8_t level)
         .level = level,
         .timestamp_ms = k_uptime_get_32(),
     };
-
-    /* For simulation/testing it is fine to block if queue is full */
+    
     k_msgq_put(&sensor_msgq, &evt, K_FOREVER);
 }
 
-/* GPIO ISR: called by the driver when a real edge happens on the pins */
+//Função de interupção para capturar os valores dos pinos
 static void sensor_gpio_isr(const struct device *dev,
                             struct gpio_callback *cb,
                             uint32_t pins)
@@ -55,7 +49,7 @@ static void sensor_gpio_isr(const struct device *dev,
     }
 }
 
-/* Thread that consumes events and prints them */
+// Thread responsável por capturar os valores da fila de mensagem enviada pela interupção do sensores. Após isso, envia para o proessamento
 static void sensor_thread(void *arg1, void *arg2, void *arg3)
 {
     struct sensor_event evt;
@@ -64,73 +58,65 @@ static void sensor_thread(void *arg1, void *arg2, void *arg3)
     ARG_UNUSED(arg2);
     ARG_UNUSED(arg3);
 
-    LOG_INF("Sensor thread started");
+    LOG_INF("Iniciando thread do sensor");
 
-    while (1) {
-        /* Block until a new event arrives */
-        if (k_msgq_get(&sensor_msgq, &evt, K_FOREVER) == 0) {
-            LOG_INF("Sensor %d changed to %d at %u ms",
-                    evt.sensor_id,
-                    evt.level,
-                    (unsigned int)evt.timestamp_ms);
+    while (1) {        
+        if (k_msgq_get(&sensor_msgq, &evt, K_FOREVER) == 0) {           
+            radar_process_sensor_event(&evt);
         }
     }
 }
 
-/* Create the sensor thread */
 K_THREAD_DEFINE(sensor_thread_id,
                 1024,
                 sensor_thread,
                 NULL, NULL, NULL,
                 5, 0, 0);
 
-/* Public init function called from main.c */
+// Inicializador dos sensores
 int sensor_init(void)
 {
     int ret;
 
     if (!device_is_ready(sensor_gpio_dev)) {
-        LOG_ERR("Sensor GPIO device is not ready");
+    LOG_ERR("Sensor GPIO nao está pronto");
         return -ENODEV;
     }
-
-    /* Configure pins as input (no pull-up: driver does not support it) */
+    
     ret = gpio_pin_configure(sensor_gpio_dev, SENSOR1_PIN, GPIO_INPUT);
     if (ret < 0) {
-        LOG_ERR("Failed to configure SENSOR1_PIN (err %d)", ret);
+        LOG_ERR("Falha em SENSOR1_PIN (err %d)", ret);
         return ret;
     }
 
     ret = gpio_pin_configure(sensor_gpio_dev, SENSOR2_PIN, GPIO_INPUT);
     if (ret < 0) {
-        LOG_ERR("Failed to configure SENSOR2_PIN (err %d)", ret);
+        LOG_ERR("Falha em SENSOR2_PIN (err %d)", ret);
         return ret;
     }
-
-    /* Interrupt on rising edge only */
+    
     ret = gpio_pin_interrupt_configure(sensor_gpio_dev, SENSOR1_PIN,
                                        GPIO_INT_EDGE_RISING);
     if (ret < 0) {
-        LOG_ERR("Failed to configure interrupt for SENSOR1_PIN (err %d)", ret);
+        LOG_ERR("Falha em interupção para SENSOR1_PIN (err %d)", ret);
         return ret;
     }
 
     ret = gpio_pin_interrupt_configure(sensor_gpio_dev, SENSOR2_PIN,
                                        GPIO_INT_EDGE_RISING);
     if (ret < 0) {
-        LOG_ERR("Failed to configure interrupt for SENSOR2_PIN (err %d)", ret);
+        LOG_ERR("Falha em interupção para SENSOR2_PIN (err %d)", ret);
         return ret;
     }
-
-    /* Register callback for both pins */
+    
+    //Configura interupção
     gpio_init_callback(&sensor_cb,
                        sensor_gpio_isr,
                        BIT(SENSOR1_PIN) | BIT(SENSOR2_PIN));
 
     gpio_add_callback(sensor_gpio_dev, &sensor_cb);
 
-    LOG_INF("GPIO sensors configured on pins %d and %d", SENSOR1_PIN, SENSOR2_PIN);
-    LOG_INF("Waiting for sensor events...");
+    LOG_INF("Sensores configurados");
 
     return 0;
 }

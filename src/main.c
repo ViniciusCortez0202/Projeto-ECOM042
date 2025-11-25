@@ -2,22 +2,25 @@
 #include <zephyr/logging/log.h>
 
 #include "sensor.h"
+#include "radar_processing.h"
+#include "radar_display.h"
 
 LOG_MODULE_REGISTER(radar, LOG_LEVEL_INF);
 
 int main(void)
 {
-    int ret;
+	int ret;
 
-    LOG_INF("Radar app starting...");
+	LOG_INF("Iniciando o radar...");
 
-    ret = sensor_init();
-    if (ret < 0) {
-        LOG_ERR("Sensor init failed (err %d)", ret);
-        return ret;
-    }
+	ret = sensor_init();
+	if (ret < 0) {
+		LOG_ERR("Erro ao iniciar sensor (err %d)", ret);
+		return ret;
+	}
+	radar_processing_init();
+	radar_display_init();
 
-    LOG_INF("Radar app initialized.");
-    /* main thread can simply return; sensor threads keep running */
+	LOG_INF("Radar inicializado.");
 	return 0;
 }

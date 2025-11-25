@@ -1,0 +1,5 @@
+#ifndef CAMERA_SERVICE_H
+#define CAMERA_SERVICE_H
+
+
+#endif /* CAMERA_SERVICE_H */

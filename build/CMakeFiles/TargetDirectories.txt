@@ -81,6 +81,9 @@
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/lib/heap/CMakeFiles/rebuild_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/lib/mem_blocks/CMakeFiles/edit_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/lib/mem_blocks/CMakeFiles/rebuild_cache.dir
+/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/lib/net_buf/CMakeFiles/lib__net_buf.dir
+/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/lib/net_buf/CMakeFiles/edit_cache.dir
+/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/lib/net_buf/CMakeFiles/rebuild_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/lib/os/CMakeFiles/edit_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/lib/os/CMakeFiles/rebuild_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/lib/utils/CMakeFiles/edit_cache.dir
@@ -133,6 +136,7 @@
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/subsys/pmci/CMakeFiles/rebuild_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/subsys/portability/CMakeFiles/edit_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/subsys/portability/CMakeFiles/rebuild_cache.dir
+/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/subsys/random/CMakeFiles/subsys__random.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/subsys/random/CMakeFiles/edit_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/subsys/random/CMakeFiles/rebuild_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/subsys/rtio/CMakeFiles/edit_cache.dir

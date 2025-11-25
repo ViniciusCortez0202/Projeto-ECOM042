@@ -1664,7 +1664,7 @@ rom_start       0x0000000000000000       0xc0
                 0x0000000000000040                _irq_vector_table
                 0x00000000000000c0                _vector_end = .
 
-text            0x00000000000000c0     0x428c
+text            0x00000000000000c0     0x4290
                 0x00000000000000c0                __text_region_start = .
  *(SORT_BY_ALIGNMENT(.text))
  .text          0x00000000000000c0       0x30 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v7-m/nofp/libgcc.a(_aeabi_uldivmod.o)
@@ -2028,466 +2028,467 @@ text            0x00000000000000c0     0x428c
  .text.emit_vehicle
                 0x0000000000003046       0x42 app/libapp.a(sensor_sim.c.obj)
  .text.sensor_sim_thread
-                0x0000000000003088       0x34 app/libapp.a(sensor_sim.c.obj)
+                0x0000000000003088       0x36 app/libapp.a(sensor_sim.c.obj)
  .text.radar_evaluate_speed
-                0x00000000000030bc       0x2e app/libapp.a(radar_control.c.obj)
-                0x00000000000030bc                radar_evaluate_speed
+                0x00000000000030be       0x2e app/libapp.a(radar_control.c.obj)
+                0x00000000000030be                radar_evaluate_speed
  .text.rand_letter
-                0x00000000000030ea       0x22 app/libapp.a(plate.c.obj)
+                0x00000000000030ec       0x22 app/libapp.a(plate.c.obj)
  .text.rand_digit
-                0x000000000000310c       0x22 app/libapp.a(plate.c.obj)
+                0x000000000000310e       0x22 app/libapp.a(plate.c.obj)
  .text.plate_is_valid_mercosul
-                0x000000000000312e       0x58 app/libapp.a(plate.c.obj)
-                0x000000000000312e                plate_is_valid_mercosul
+                0x0000000000003130       0x58 app/libapp.a(plate.c.obj)
+                0x0000000000003130                plate_is_valid_mercosul
  .text.plate_generate_mercosul
-                0x0000000000003186       0x34 app/libapp.a(plate.c.obj)
-                0x0000000000003186                plate_generate_mercosul
+                0x0000000000003188       0x34 app/libapp.a(plate.c.obj)
+                0x0000000000003188                plate_generate_mercosul
  .text.plate_generate_invalid
-                0x00000000000031ba       0x10 app/libapp.a(plate.c.obj)
-                0x00000000000031ba                plate_generate_invalid
+                0x00000000000031bc       0x10 app/libapp.a(plate.c.obj)
+                0x00000000000031bc                plate_generate_invalid
  .text.chunk_field
-                0x00000000000031ca       0x16 zephyr/libzephyr.a(heap.c.obj)
+                0x00000000000031cc       0x16 zephyr/libzephyr.a(heap.c.obj)
  .text.chunk_set
-                0x00000000000031e0       0x16 zephyr/libzephyr.a(heap.c.obj)
+                0x00000000000031e2       0x16 zephyr/libzephyr.a(heap.c.obj)
  .text.chunk_size
-                0x00000000000031f6        0xc zephyr/libzephyr.a(heap.c.obj)
+                0x00000000000031f8        0xc zephyr/libzephyr.a(heap.c.obj)
  .text.set_chunk_used
-                0x0000000000003202       0x30 zephyr/libzephyr.a(heap.c.obj)
+                0x0000000000003204       0x30 zephyr/libzephyr.a(heap.c.obj)
  .text.set_chunk_size
-                0x0000000000003232        0x8 zephyr/libzephyr.a(heap.c.obj)
+                0x0000000000003234        0x8 zephyr/libzephyr.a(heap.c.obj)
  .text.mem_to_chunkid
-                0x000000000000323a       0x14 zephyr/libzephyr.a(heap.c.obj)
+                0x000000000000323c       0x14 zephyr/libzephyr.a(heap.c.obj)
  .text.bucket_idx.isra.0
-                0x000000000000324e       0x1c zephyr/libzephyr.a(heap.c.obj)
+                0x0000000000003250       0x1c zephyr/libzephyr.a(heap.c.obj)
  .text.free_list_remove_bidx
-                0x000000000000326a       0x5c zephyr/libzephyr.a(heap.c.obj)
+                0x000000000000326c       0x5c zephyr/libzephyr.a(heap.c.obj)
  .text.free_list_remove
-                0x00000000000032c6       0x2e zephyr/libzephyr.a(heap.c.obj)
+                0x00000000000032c8       0x2e zephyr/libzephyr.a(heap.c.obj)
  .text.alloc_chunk
-                0x00000000000032f4       0x74 zephyr/libzephyr.a(heap.c.obj)
+                0x00000000000032f6       0x74 zephyr/libzephyr.a(heap.c.obj)
  .text.split_chunks
-                0x0000000000003368       0x4e zephyr/libzephyr.a(heap.c.obj)
+                0x000000000000336a       0x4e zephyr/libzephyr.a(heap.c.obj)
  .text.merge_chunks
-                0x00000000000033b6       0x3c zephyr/libzephyr.a(heap.c.obj)
+                0x00000000000033b8       0x3c zephyr/libzephyr.a(heap.c.obj)
  .text.free_list_add
-                0x00000000000033f2       0x84 zephyr/libzephyr.a(heap.c.obj)
+                0x00000000000033f4       0x84 zephyr/libzephyr.a(heap.c.obj)
  .text.free_chunk
-                0x0000000000003476       0x84 zephyr/libzephyr.a(heap.c.obj)
+                0x0000000000003478       0x84 zephyr/libzephyr.a(heap.c.obj)
  .text.sys_heap_free
-                0x00000000000034fa       0x24 zephyr/libzephyr.a(heap.c.obj)
-                0x00000000000034fa                sys_heap_free
+                0x00000000000034fc       0x24 zephyr/libzephyr.a(heap.c.obj)
+                0x00000000000034fc                sys_heap_free
  .text.sys_heap_alloc
-                0x000000000000351e       0x76 zephyr/libzephyr.a(heap.c.obj)
-                0x000000000000351e                sys_heap_alloc
+                0x0000000000003520       0x76 zephyr/libzephyr.a(heap.c.obj)
+                0x0000000000003520                sys_heap_alloc
  .text.sys_heap_noalign_alloc
-                0x0000000000003594        0x6 zephyr/libzephyr.a(heap.c.obj)
-                0x0000000000003594                sys_heap_noalign_alloc
+                0x0000000000003596        0x6 zephyr/libzephyr.a(heap.c.obj)
+                0x0000000000003596                sys_heap_noalign_alloc
  .text.sys_heap_init
-                0x000000000000359a       0xb0 zephyr/libzephyr.a(heap.c.obj)
-                0x000000000000359a                sys_heap_init
+                0x000000000000359c       0xb0 zephyr/libzephyr.a(heap.c.obj)
+                0x000000000000359c                sys_heap_init
  .text.arch_printk_char_out
-                0x000000000000364a        0x4 zephyr/libzephyr.a(printk.c.obj)
-                0x000000000000364a                arch_printk_char_out
- .text.printk   0x000000000000364e       0x1a zephyr/libzephyr.a(printk.c.obj)
-                0x000000000000364e                printk
+                0x000000000000364c        0x4 zephyr/libzephyr.a(printk.c.obj)
+                0x000000000000364c                arch_printk_char_out
+ .text.printk   0x0000000000003650       0x1a zephyr/libzephyr.a(printk.c.obj)
+                0x0000000000003650                printk
  .text._ConfigAbsSyms
-                0x0000000000003668        0x2 zephyr/libzephyr.a(configs.c.obj)
-                0x0000000000003668                _ConfigAbsSyms
+                0x000000000000366a        0x2 zephyr/libzephyr.a(configs.c.obj)
+                0x000000000000366a                _ConfigAbsSyms
  .text.z_arm_fatal_error
-                0x000000000000366a        0xc zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
-                0x000000000000366a                z_arm_fatal_error
+                0x000000000000366c        0xc zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
+                0x000000000000366c                z_arm_fatal_error
  .text.z_do_kernel_oops
-                0x0000000000003676        0x8 zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
-                0x0000000000003676                z_do_kernel_oops
+                0x0000000000003678        0x8 zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
+                0x0000000000003678                z_do_kernel_oops
  .text.z_irq_spurious
-                0x000000000000367e        0x8 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_manage.c.obj)
-                0x000000000000367e                z_irq_spurious
+                0x0000000000003680        0x8 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_manage.c.obj)
+                0x0000000000003680                z_irq_spurious
  .text.z_prep_c
-                0x0000000000003686       0x16 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(prep_c.c.obj)
-                0x0000000000003686                z_prep_c
+                0x0000000000003688       0x16 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(prep_c.c.obj)
+                0x0000000000003688                z_prep_c
  .text.arch_irq_unlock_outlined
-                0x000000000000369c        0xe zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread.c.obj)
-                0x000000000000369c                arch_irq_unlock_outlined
+                0x000000000000369e        0xe zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread.c.obj)
+                0x000000000000369e                arch_irq_unlock_outlined
  .text.arch_cpu_idle
-                0x00000000000036aa       0x1a zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(cpu_idle.c.obj)
-                0x00000000000036aa                arch_cpu_idle
+                0x00000000000036ac       0x1a zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(cpu_idle.c.obj)
+                0x00000000000036ac                arch_cpu_idle
  .text.size_to_mpu_rasr_size
-                0x00000000000036c4       0x20 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu.c.obj)
+                0x00000000000036c6       0x20 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu.c.obj)
  .text.picolibc_put
-                0x00000000000036e4        0xa zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(stdio.c.obj)
+                0x00000000000036e6        0xa zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(stdio.c.obj)
  .text.generic_data_ref
-                0x00000000000036ee        0xe zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
+                0x00000000000036f0        0xe zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
  .text.heap_data_unref
-                0x00000000000036fc       0x16 zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
+                0x00000000000036fe       0x16 zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
  .text.heap_data_alloc
-                0x0000000000003712       0x14 zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
+                0x0000000000003714       0x14 zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
  .text.net_buf_simple_add_mem
-                0x0000000000003726       0x12 zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
-                0x0000000000003726                net_buf_simple_add_mem
+                0x0000000000003728       0x12 zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
+                0x0000000000003728                net_buf_simple_add_mem
  .text.net_buf_simple_remove_mem
-                0x0000000000003738        0xe zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
-                0x0000000000003738                net_buf_simple_remove_mem
+                0x000000000000373a        0xe zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
+                0x000000000000373a                net_buf_simple_remove_mem
  .text.net_buf_simple_headroom
-                0x0000000000003746        0x8 zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
-                0x0000000000003746                net_buf_simple_headroom
+                0x0000000000003748        0x8 zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
+                0x0000000000003748                net_buf_simple_headroom
  .text.zbus_sub_wait_msg
-                0x000000000000374e       0x3c zephyr/subsys/zbus/libsubsys__zbus.a(zbus.c.obj)
-                0x000000000000374e                zbus_sub_wait_msg
+                0x0000000000003750       0x3c zephyr/subsys/zbus/libsubsys__zbus.a(zbus.c.obj)
+                0x0000000000003750                zbus_sub_wait_msg
  .text.gpio_cmsdk_ahb_port_get_raw
-                0x000000000000378a        0xc zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x000000000000378c        0xc zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_ahb_port_set_masked_raw
-                0x0000000000003796       0x12 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x0000000000003798       0x12 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_ahb_port_set_bits_raw
-                0x00000000000037a8        0xe zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x00000000000037aa        0xe zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_ahb_port_clear_bits_raw
-                0x00000000000037b6       0x10 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x00000000000037b8       0x10 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_ahb_port_toggle_bits
-                0x00000000000037c6        0xe zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x00000000000037c8        0xe zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_ahb_pin_interrupt_configure
-                0x00000000000037d4       0x4a zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x00000000000037d6       0x4a zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_ahb_manage_callback
-                0x000000000000381e       0x52 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x0000000000003820       0x52 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_ahb_init
-                0x0000000000003870        0xc zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x0000000000003872        0xc zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_port_0_config_func
-                0x000000000000387c       0x16 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x000000000000387e       0x16 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_port_1_config_func
-                0x0000000000003892       0x16 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x0000000000003894       0x16 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_port_2_config_func
-                0x00000000000038a8       0x16 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x00000000000038aa       0x16 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_port_3_config_func
-                0x00000000000038be       0x16 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x00000000000038c0       0x16 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_cmsdk_ahb_isr
-                0x00000000000038d4       0x32 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x00000000000038d6       0x32 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.cmsdk_ahb_gpio_config
-                0x0000000000003906       0x40 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
-                0x0000000000003906                cmsdk_ahb_gpio_config
+                0x0000000000003908       0x40 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x0000000000003908                cmsdk_ahb_gpio_config
  .text.gpio_cmsdk_ahb_config
-                0x0000000000003946        0xa zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x0000000000003948        0xa zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .text.gpio_mmio32_config
-                0x0000000000003950       0x70 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x0000000000003952       0x70 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
  .text.gpio_mmio32_port_get_raw
-                0x00000000000039c0       0x12 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x00000000000039c2       0x12 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
  .text.gpio_mmio32_port_set_masked_raw
-                0x00000000000039d2       0x2e zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x00000000000039d4       0x2e zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
  .text.gpio_mmio32_port_set_bits_raw
-                0x0000000000003a00       0x2a zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x0000000000003a02       0x2a zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
  .text.gpio_mmio32_port_clear_bits_raw
-                0x0000000000003a2a       0x2c zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x0000000000003a2c       0x2c zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
  .text.gpio_mmio32_port_toggle_bits
-                0x0000000000003a56       0x2a zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x0000000000003a58       0x2a zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
  .text.gpio_mmio32_pin_interrupt_configure
-                0x0000000000003a80        0x6 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
-                0x0000000000003a80                gpio_mmio32_pin_interrupt_configure
+                0x0000000000003a82        0x6 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x0000000000003a82                gpio_mmio32_pin_interrupt_configure
  .text.gpio_mmio32_init
-                0x0000000000003a86        0xa zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
-                0x0000000000003a86                gpio_mmio32_init
+                0x0000000000003a88        0xa zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x0000000000003a88                gpio_mmio32_init
  .text.pinctrl_lookup_state
-                0x0000000000003a90       0x26 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(common.c.obj)
-                0x0000000000003a90                pinctrl_lookup_state
+                0x0000000000003a92       0x26 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(common.c.obj)
+                0x0000000000003a92                pinctrl_lookup_state
  .text.uart_cmsdk_apb_poll_in
-                0x0000000000003ab6       0x16 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003ab8       0x16 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_poll_out
-                0x0000000000003acc        0xe zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003ace        0xe zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_fifo_fill
-                0x0000000000003ada       0x20 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003adc       0x20 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_fifo_read
-                0x0000000000003afa       0x20 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003afc       0x20 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_tx_disable
-                0x0000000000003b1a       0x14 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003b1c       0x14 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_tx_ready
-                0x0000000000003b2e        0xe zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003b30        0xe zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_rx_enable
-                0x0000000000003b3c        0xe zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003b3e        0xe zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_rx_disable
-                0x0000000000003b4a       0x14 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003b4c       0x14 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_tx_complete
-                0x0000000000003b5e        0x4 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003b60        0x4 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_rx_ready
-                0x0000000000003b62        0xc zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003b64        0xc zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_err_enable
-                0x0000000000003b6e        0x2 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003b70        0x2 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_is_pending
-                0x0000000000003b70       0x1c zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003b72       0x1c zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_update
-                0x0000000000003b8c        0x4 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003b8e        0x4 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_callback_set
-                0x0000000000003b90        0x8 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003b92        0x8 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_isr
-                0x0000000000003b98        0xc zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003b9a        0xc zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_tx_enable
-                0x0000000000003ba4       0x2a zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003ba6       0x2a zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_config_func_0
-                0x0000000000003bce       0x26 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003bd0       0x26 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_config_func_1
-                0x0000000000003bf4       0x26 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003bf6       0x26 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_config_func_2
-                0x0000000000003c1a       0x26 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003c1c       0x26 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_init
-                0x0000000000003c40       0x4a zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003c42       0x4a zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.uart_cmsdk_apb_irq_err_disable
-                0x0000000000003c8a        0x2 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000003c8c        0x2 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .text.z_device_state_init
-                0x0000000000003c8c        0x2 zephyr/kernel/libkernel.a(device.c.obj)
-                0x0000000000003c8c                z_device_state_init
+                0x0000000000003c8e        0x2 zephyr/kernel/libkernel.a(device.c.obj)
+                0x0000000000003c8e                z_device_state_init
  .text.z_impl_device_is_ready
-                0x0000000000003c8e       0x16 zephyr/kernel/libkernel.a(device.c.obj)
-                0x0000000000003c8e                z_impl_device_is_ready
+                0x0000000000003c90       0x16 zephyr/kernel/libkernel.a(device.c.obj)
+                0x0000000000003c90                z_impl_device_is_ready
  .text.arch_system_halt
-                0x0000000000003ca4       0x10 zephyr/kernel/libkernel.a(fatal.c.obj)
-                0x0000000000003ca4                arch_system_halt
+                0x0000000000003ca6       0x10 zephyr/kernel/libkernel.a(fatal.c.obj)
+                0x0000000000003ca6                arch_system_halt
  .text.k_sys_fatal_error_handler
-                0x0000000000003cb4        0x6 zephyr/kernel/libkernel.a(fatal.c.obj)
-                0x0000000000003cb4                k_sys_fatal_error_handler
+                0x0000000000003cb6        0x6 zephyr/kernel/libkernel.a(fatal.c.obj)
+                0x0000000000003cb6                k_sys_fatal_error_handler
  .text.do_device_init
-                0x0000000000003cba       0x2e zephyr/kernel/libkernel.a(init.c.obj)
+                0x0000000000003cbc       0x2e zephyr/kernel/libkernel.a(init.c.obj)
  .text.z_early_memset
-                0x0000000000003ce8        0x4 zephyr/kernel/libkernel.a(init.c.obj)
-                0x0000000000003ce8                z_early_memset
+                0x0000000000003cea        0x4 zephyr/kernel/libkernel.a(init.c.obj)
+                0x0000000000003cea                z_early_memset
  .text.z_early_memcpy
-                0x0000000000003cec        0x4 zephyr/kernel/libkernel.a(init.c.obj)
-                0x0000000000003cec                z_early_memcpy
+                0x0000000000003cee        0x4 zephyr/kernel/libkernel.a(init.c.obj)
+                0x0000000000003cee                z_early_memcpy
  .text.k_heap_init
-                0x0000000000003cf0       0x10 zephyr/kernel/libkernel.a(kheap.c.obj)
-                0x0000000000003cf0                k_heap_init
+                0x0000000000003cf2       0x10 zephyr/kernel/libkernel.a(kheap.c.obj)
+                0x0000000000003cf2                k_heap_init
  .text.k_heap_free
-                0x0000000000003d00       0x38 zephyr/kernel/libkernel.a(kheap.c.obj)
-                0x0000000000003d00                k_heap_free
- .text.idle     0x0000000000003d38       0x16 zephyr/kernel/libkernel.a(idle.c.obj)
-                0x0000000000003d38                idle
+                0x0000000000003d02       0x38 zephyr/kernel/libkernel.a(kheap.c.obj)
+                0x0000000000003d02                k_heap_free
+ .text.idle     0x0000000000003d3a       0x16 zephyr/kernel/libkernel.a(idle.c.obj)
+                0x0000000000003d3a                idle
  .text.unpend_thread_no_timeout
-                0x0000000000003d4e       0x1a zephyr/kernel/libkernel.a(msg_q.c.obj)
+                0x0000000000003d50       0x1a zephyr/kernel/libkernel.a(msg_q.c.obj)
  .text.unpend_thread_no_timeout
-                0x0000000000003d68       0x1a zephyr/kernel/libkernel.a(queue.c.obj)
+                0x0000000000003d6a       0x1a zephyr/kernel/libkernel.a(queue.c.obj)
  .text.queue_insert
-                0x0000000000003d82       0xce zephyr/kernel/libkernel.a(queue.c.obj)
+                0x0000000000003d84       0xce zephyr/kernel/libkernel.a(queue.c.obj)
  .text.z_queue_node_peek
-                0x0000000000003e50       0x18 zephyr/kernel/libkernel.a(queue.c.obj)
-                0x0000000000003e50                z_queue_node_peek
+                0x0000000000003e52       0x18 zephyr/kernel/libkernel.a(queue.c.obj)
+                0x0000000000003e52                z_queue_node_peek
  .text.k_queue_append
-                0x0000000000003e68       0x16 zephyr/kernel/libkernel.a(queue.c.obj)
-                0x0000000000003e68                k_queue_append
+                0x0000000000003e6a       0x16 zephyr/kernel/libkernel.a(queue.c.obj)
+                0x0000000000003e6a                k_queue_append
  .text.k_queue_prepend
-                0x0000000000003e7e       0x14 zephyr/kernel/libkernel.a(queue.c.obj)
-                0x0000000000003e7e                k_queue_prepend
+                0x0000000000003e80       0x14 zephyr/kernel/libkernel.a(queue.c.obj)
+                0x0000000000003e80                k_queue_prepend
  .text.flag_test_and_clear
-                0x0000000000003e92       0x16 zephyr/kernel/libkernel.a(work.c.obj)
+                0x0000000000003e94       0x16 zephyr/kernel/libkernel.a(work.c.obj)
  .text.unschedule_locked
-                0x0000000000003ea8       0x1e zephyr/kernel/libkernel.a(work.c.obj)
+                0x0000000000003eaa       0x1e zephyr/kernel/libkernel.a(work.c.obj)
  .text.notify_queue_locked.isra.0
-                0x0000000000003ec6        0xe zephyr/kernel/libkernel.a(work.c.obj)
+                0x0000000000003ec8        0xe zephyr/kernel/libkernel.a(work.c.obj)
  .text.work_timeout
-                0x0000000000003ed4       0x3c zephyr/kernel/libkernel.a(work.c.obj)
+                0x0000000000003ed6       0x3c zephyr/kernel/libkernel.a(work.c.obj)
  .text.k_work_init_delayable
-                0x0000000000003f10       0x18 zephyr/kernel/libkernel.a(work.c.obj)
-                0x0000000000003f10                k_work_init_delayable
+                0x0000000000003f12       0x18 zephyr/kernel/libkernel.a(work.c.obj)
+                0x0000000000003f12                k_work_init_delayable
  .text.k_is_in_isr
-                0x0000000000003f28        0xc zephyr/kernel/libkernel.a(thread.c.obj)
-                0x0000000000003f28                k_is_in_isr
+                0x0000000000003f2a        0xc zephyr/kernel/libkernel.a(thread.c.obj)
+                0x0000000000003f2a                k_is_in_isr
  .text.z_impl_k_thread_priority_get
-                0x0000000000003f34        0x6 zephyr/kernel/libkernel.a(thread.c.obj)
-                0x0000000000003f34                z_impl_k_thread_priority_get
+                0x0000000000003f36        0x6 zephyr/kernel/libkernel.a(thread.c.obj)
+                0x0000000000003f36                z_impl_k_thread_priority_get
  .text.z_impl_k_thread_name_set
-                0x0000000000003f3a        0x6 zephyr/kernel/libkernel.a(thread.c.obj)
-                0x0000000000003f3a                z_impl_k_thread_name_set
+                0x0000000000003f3c        0x6 zephyr/kernel/libkernel.a(thread.c.obj)
+                0x0000000000003f3c                z_impl_k_thread_name_set
  .text.sys_dlist_remove
-                0x0000000000003f40       0x10 zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000003f42       0x10 zephyr/kernel/libkernel.a(sched.c.obj)
  .text.unpend_thread_no_timeout
-                0x0000000000003f50       0x14 zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000003f52       0x14 zephyr/kernel/libkernel.a(sched.c.obj)
  .text.add_to_waitq_locked
-                0x0000000000003f64       0x50 zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000003f66       0x50 zephyr/kernel/libkernel.a(sched.c.obj)
  .text.z_ready_thread
-                0x0000000000003fb4       0x1e zephyr/kernel/libkernel.a(sched.c.obj)
-                0x0000000000003fb4                z_ready_thread
+                0x0000000000003fb6       0x1e zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000003fb6                z_ready_thread
  .text.z_unpend_thread_no_timeout
-                0x0000000000003fd2       0x22 zephyr/kernel/libkernel.a(sched.c.obj)
-                0x0000000000003fd2                z_unpend_thread_no_timeout
+                0x0000000000003fd4       0x22 zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000003fd4                z_unpend_thread_no_timeout
  .text.z_sched_wake_thread
-                0x0000000000003ff4       0x3a zephyr/kernel/libkernel.a(sched.c.obj)
-                0x0000000000003ff4                z_sched_wake_thread
+                0x0000000000003ff6       0x3a zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000003ff6                z_sched_wake_thread
  .text.z_thread_timeout
-                0x000000000000402e        0x8 zephyr/kernel/libkernel.a(sched.c.obj)
-                0x000000000000402e                z_thread_timeout
+                0x0000000000004030        0x8 zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000004030                z_thread_timeout
  .text.z_unpend_thread
-                0x0000000000004036       0x10 zephyr/kernel/libkernel.a(sched.c.obj)
-                0x0000000000004036                z_unpend_thread
+                0x0000000000004038       0x10 zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000004038                z_unpend_thread
  .text.z_unpend_all
-                0x0000000000004046       0x26 zephyr/kernel/libkernel.a(sched.c.obj)
-                0x0000000000004046                z_unpend_all
+                0x0000000000004048       0x26 zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000004048                z_unpend_all
  .text.z_impl_k_sleep
-                0x000000000000406c       0x3a zephyr/kernel/libkernel.a(sched.c.obj)
-                0x000000000000406c                z_impl_k_sleep
+                0x000000000000406e       0x3a zephyr/kernel/libkernel.a(sched.c.obj)
+                0x000000000000406e                z_impl_k_sleep
  .text.z_sched_wake
-                0x00000000000040a6       0x44 zephyr/kernel/libkernel.a(sched.c.obj)
-                0x00000000000040a6                z_sched_wake
+                0x00000000000040a8       0x44 zephyr/kernel/libkernel.a(sched.c.obj)
+                0x00000000000040a8                z_sched_wake
  .text.next_timeout
-                0x00000000000040ea       0x2e zephyr/kernel/libkernel.a(timeout.c.obj)
+                0x00000000000040ec       0x2e zephyr/kernel/libkernel.a(timeout.c.obj)
  .text.z_abort_timeout
-                0x0000000000004118       0x50 zephyr/kernel/libkernel.a(timeout.c.obj)
-                0x0000000000004118                z_abort_timeout
+                0x000000000000411a       0x50 zephyr/kernel/libkernel.a(timeout.c.obj)
+                0x000000000000411a                z_abort_timeout
  .text.sys_clock_tick_get_32
-                0x0000000000004168        0x8 zephyr/kernel/libkernel.a(timeout.c.obj)
-                0x0000000000004168                sys_clock_tick_get_32
+                0x000000000000416a        0x8 zephyr/kernel/libkernel.a(timeout.c.obj)
+                0x000000000000416a                sys_clock_tick_get_32
  .text.z_impl_k_uptime_ticks
-                0x0000000000004170        0x4 zephyr/kernel/libkernel.a(timeout.c.obj)
-                0x0000000000004170                z_impl_k_uptime_ticks
+                0x0000000000004172        0x4 zephyr/kernel/libkernel.a(timeout.c.obj)
+                0x0000000000004172                z_impl_k_uptime_ticks
  .text.sys_timepoint_calc
-                0x0000000000004174       0x4a zephyr/kernel/libkernel.a(timeout.c.obj)
-                0x0000000000004174                sys_timepoint_calc
+                0x0000000000004176       0x4a zephyr/kernel/libkernel.a(timeout.c.obj)
+                0x0000000000004176                sys_timepoint_calc
  .text.sys_timepoint_timeout
-                0x00000000000041be       0x42 zephyr/kernel/libkernel.a(timeout.c.obj)
-                0x00000000000041be                sys_timepoint_timeout
+                0x00000000000041c0       0x42 zephyr/kernel/libkernel.a(timeout.c.obj)
+                0x00000000000041c0                sys_timepoint_timeout
  .text.z_alloc_helper
-                0x0000000000004200       0x30 zephyr/kernel/libkernel.a(mempool.c.obj)
- .text.k_free   0x0000000000004230        0xe zephyr/kernel/libkernel.a(mempool.c.obj)
-                0x0000000000004230                k_free
- .text.memcpy   0x000000000000423e       0x1c /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(memcpy.c.o)
-                0x000000000000423e                memcpy
-                0x000000000000423e                __aeabi_memcpy
-                0x000000000000423e                __aeabi_memcpy4
-                0x000000000000423e                __aeabi_memcpy8
- .text.memset   0x000000000000425a       0x10 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(memset.c.o)
-                0x000000000000425a                memset
- .text.strnlen  0x000000000000426a       0x18 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_string_strnlen.c.o)
-                0x000000000000426a                strnlen
+                0x0000000000004202       0x30 zephyr/kernel/libkernel.a(mempool.c.obj)
+ .text.k_free   0x0000000000004232        0xe zephyr/kernel/libkernel.a(mempool.c.obj)
+                0x0000000000004232                k_free
+ .text.memcpy   0x0000000000004240       0x1c /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(memcpy.c.o)
+                0x0000000000004240                memcpy
+                0x0000000000004240                __aeabi_memcpy
+                0x0000000000004240                __aeabi_memcpy4
+                0x0000000000004240                __aeabi_memcpy8
+ .text.memset   0x000000000000425c       0x10 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(memset.c.o)
+                0x000000000000425c                memset
+ .text.strnlen  0x000000000000426c       0x18 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_string_strnlen.c.o)
+                0x000000000000426c                strnlen
  .text.__ultoa_invert
-                0x0000000000004282       0xae /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_tinystdio_vflprintf.c.o)
+                0x0000000000004284       0xae /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_tinystdio_vflprintf.c.o)
  .text.__file_str_put
-                0x0000000000004330       0x10 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_tinystdio_filestrput.c.o)
-                0x0000000000004330                __file_str_put
+                0x0000000000004332       0x10 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_tinystdio_filestrput.c.o)
+                0x0000000000004332                __file_str_put
  *(SORT_BY_ALIGNMENT(.TEXT.*))
+ *fill*         0x0000000000004342        0x2 
  .TEXT.__aeabi_read_tp
-                0x0000000000004340        0xc zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(__aeabi_read_tp.S.obj)
-                0x0000000000004340                __aeabi_read_tp
+                0x0000000000004344        0xc zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(__aeabi_read_tp.S.obj)
+                0x0000000000004344                __aeabi_read_tp
  *(SORT_BY_ALIGNMENT(.gnu.linkonce.t.*))
  *(SORT_BY_ALIGNMENT(.glue_7t))
- .glue_7t       0x000000000000434c        0x0 linker stubs
+ .glue_7t       0x0000000000004350        0x0 linker stubs
  *(SORT_BY_ALIGNMENT(.glue_7))
- .glue_7        0x000000000000434c        0x0 linker stubs
+ .glue_7        0x0000000000004350        0x0 linker stubs
  *(SORT_BY_ALIGNMENT(.vfp11_veneer))
- .vfp11_veneer  0x000000000000434c        0x0 linker stubs
+ .vfp11_veneer  0x0000000000004350        0x0 linker stubs
  *(SORT_BY_ALIGNMENT(.v4_bx))
- .v4_bx         0x000000000000434c        0x0 linker stubs
-                0x000000000000434c                . = ALIGN (0x4)
-                0x000000000000434c                __text_region_end = .
+ .v4_bx         0x0000000000004350        0x0 linker stubs
+                0x0000000000004350                . = ALIGN (0x4)
+                0x0000000000004350                __text_region_end = .
 
-.ARM.exidx      0x000000000000434c        0x8
-                0x000000000000434c                __exidx_start = .
+.ARM.exidx      0x0000000000004350        0x8
+                0x0000000000004350                __exidx_start = .
  *(SORT_BY_ALIGNMENT(.ARM.exidx*) SORT_BY_ALIGNMENT(gnu.linkonce.armexidx.*))
- .ARM.exidx     0x000000000000434c        0x8 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(strlen.S.o)
- .ARM.exidx     0x0000000000004354        0x0 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0000000000004350        0x8 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(strlen.S.o)
+ .ARM.exidx     0x0000000000004358        0x0 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
                                           0x8 (size before relaxing)
-                0x0000000000004354                __exidx_end = .
-                0x0000000000004354                __rodata_region_start = .
+                0x0000000000004358                __exidx_end = .
+                0x0000000000004358                __rodata_region_start = .
 
-initlevel       0x0000000000004354       0x80
-                0x0000000000004354                __init_start = .
-                0x0000000000004354                __init_EARLY_start = .
+initlevel       0x0000000000004358       0x80
+                0x0000000000004358                __init_start = .
+                0x0000000000004358                __init_EARLY_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_EARLY_P_?_*)))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_EARLY_P_??_*)))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_EARLY_P_???_*)))
-                0x0000000000004354                __init_PRE_KERNEL_1_start = .
+                0x0000000000004358                __init_PRE_KERNEL_1_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_PRE_KERNEL_1_P_?_*)))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_PRE_KERNEL_1_P_??_*)))
  .z_init_PRE_KERNEL_1_P_30_SUB_0_
-                0x0000000000004354        0x8 zephyr/kernel/libkernel.a(kheap.c.obj)
+                0x0000000000004358        0x8 zephyr/kernel/libkernel.a(kheap.c.obj)
  .z_init_PRE_KERNEL_1_P_40_SUB_00028_
-                0x000000000000435c        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x0000000000004360        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .z_init_PRE_KERNEL_1_P_40_SUB_00029_
-                0x0000000000004364        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x0000000000004368        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .z_init_PRE_KERNEL_1_P_40_SUB_00030_
-                0x000000000000436c        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x0000000000004370        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .z_init_PRE_KERNEL_1_P_40_SUB_00031_
-                0x0000000000004374        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x0000000000004378        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
  .z_init_PRE_KERNEL_1_P_50_SUB_00008_
-                0x000000000000437c        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x0000000000004380        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
  .z_init_PRE_KERNEL_1_P_50_SUB_00012_
-                0x0000000000004384        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x0000000000004388        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
  .z_init_PRE_KERNEL_1_P_50_SUB_00036_
-                0x000000000000438c        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x0000000000004390        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
  .z_init_PRE_KERNEL_1_P_50_SUB_00041_
-                0x0000000000004394        0x8 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x0000000000004398        0x8 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .z_init_PRE_KERNEL_1_P_50_SUB_00042_
-                0x000000000000439c        0x8 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x00000000000043a0        0x8 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .z_init_PRE_KERNEL_1_P_50_SUB_00043_
-                0x00000000000043a4        0x8 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x00000000000043a8        0x8 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
  .z_init_PRE_KERNEL_1_P_60_SUB_0_
-                0x00000000000043ac        0x8 zephyr/drivers/console/libdrivers__console.a(uart_console.c.obj)
+                0x00000000000043b0        0x8 zephyr/drivers/console/libdrivers__console.a(uart_console.c.obj)
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_PRE_KERNEL_1_P_???_*)))
-                0x00000000000043b4                __init_PRE_KERNEL_2_start = .
+                0x00000000000043b8                __init_PRE_KERNEL_2_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_PRE_KERNEL_2_P_?_*)))
  .z_init_PRE_KERNEL_2_P_0_SUB_0_
-                0x00000000000043b4        0x8 zephyr/drivers/timer/libdrivers__timer.a(cortex_m_systick.c.obj)
+                0x00000000000043b8        0x8 zephyr/drivers/timer/libdrivers__timer.a(cortex_m_systick.c.obj)
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_PRE_KERNEL_2_P_??_*)))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_PRE_KERNEL_2_P_???_*)))
-                0x00000000000043bc                __init_POST_KERNEL_start = .
+                0x00000000000043c0                __init_POST_KERNEL_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_POST_KERNEL_P_?_*)))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_POST_KERNEL_P_??_*)))
  .z_init_POST_KERNEL_P_35_SUB_0_
-                0x00000000000043bc        0x8 zephyr/lib/libc/common/liblib__libc__common.a(malloc.c.obj)
+                0x00000000000043c0        0x8 zephyr/lib/libc/common/liblib__libc__common.a(malloc.c.obj)
  .z_init_POST_KERNEL_P_40_SUB_0_
-                0x00000000000043c4        0x8 zephyr/kernel/libkernel.a(system_work_q.c.obj)
+                0x00000000000043c8        0x8 zephyr/kernel/libkernel.a(system_work_q.c.obj)
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_POST_KERNEL_P_???_*)))
-                0x00000000000043cc                __init_APPLICATION_start = .
+                0x00000000000043d0                __init_APPLICATION_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_APPLICATION_P_?_*)))
  .z_init_APPLICATION_P_5_SUB_0_
-                0x00000000000043cc        0x8 zephyr/subsys/zbus/libsubsys__zbus.a(zbus.c.obj)
+                0x00000000000043d0        0x8 zephyr/subsys/zbus/libsubsys__zbus.a(zbus.c.obj)
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_APPLICATION_P_??_*)))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_APPLICATION_P_???_*)))
-                0x00000000000043d4                __init_SMP_start = .
+                0x00000000000043d8                __init_SMP_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_SMP_P_?_*)))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_SMP_P_??_*)))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_SMP_P_???_*)))
-                0x00000000000043d4                __init_end = .
+                0x00000000000043d8                __init_end = .
 
-device_area     0x00000000000043d4      0x140
-                0x00000000000043d4                _device_list_start = .
+device_area     0x00000000000043d8      0x140
+                0x00000000000043d8                _device_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._device.static.*_?_*)))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._device.static.*_??_*)))
  ._device.static.1_40_
-                0x00000000000043d4       0x80 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
-                0x00000000000043d4                __device_dts_ord_31
-                0x00000000000043f4                __device_dts_ord_30
-                0x0000000000004414                __device_dts_ord_29
-                0x0000000000004434                __device_dts_ord_28
+                0x00000000000043d8       0x80 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+                0x00000000000043d8                __device_dts_ord_31
+                0x00000000000043f8                __device_dts_ord_30
+                0x0000000000004418                __device_dts_ord_29
+                0x0000000000004438                __device_dts_ord_28
  ._device.static.1_50_
-                0x0000000000004454       0x60 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
-                0x0000000000004454                __device_dts_ord_36
-                0x0000000000004474                __device_dts_ord_8
-                0x0000000000004494                __device_dts_ord_12
+                0x0000000000004458       0x60 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+                0x0000000000004458                __device_dts_ord_36
+                0x0000000000004478                __device_dts_ord_8
+                0x0000000000004498                __device_dts_ord_12
  ._device.static.1_50_
-                0x00000000000044b4       0x60 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
-                0x00000000000044b4                __device_dts_ord_43
-                0x00000000000044d4                __device_dts_ord_42
-                0x00000000000044f4                __device_dts_ord_41
+                0x00000000000044b8       0x60 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+                0x00000000000044b8                __device_dts_ord_43
+                0x00000000000044d8                __device_dts_ord_42
+                0x00000000000044f8                __device_dts_ord_41
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._device.static.*_???_*)))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._device.static.*_????_*)))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._device.static.*_?????_*)))
-                0x0000000000004514                _device_list_end = .
+                0x0000000000004518                _device_list_end = .
 
-sw_isr_table    0x0000000000004514      0x100
-                0x0000000000004514                . = ALIGN (0x4)
+sw_isr_table    0x0000000000004518      0x100
+                0x0000000000004518                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(.gnu.linkonce.sw_isr_table*))
  .gnu.linkonce.sw_isr_table
-                0x0000000000004514      0x100 zephyr/arch/common/libisr_tables.a(isr_tables.c.obj)
-                0x0000000000004514                _sw_isr_table
+                0x0000000000004518      0x100 zephyr/arch/common/libisr_tables.a(isr_tables.c.obj)
+                0x0000000000004518                _sw_isr_table
 
 initlevel_error
-                0x0000000000004354        0x0
+                0x0000000000004358        0x0
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.z_init_*)))
                 0x0000000000000001                ASSERT ((SIZEOF (initlevel_error) == 0x0), Undefined initialization levels used.)
 
 app_shmem_regions
-                0x0000000000004614        0x0
-                0x0000000000004614                __app_shmem_regions_start = .
+                0x0000000000004618        0x0
+                0x0000000000004618                __app_shmem_regions_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.app_regions.*)))
-                0x0000000000004614                __app_shmem_regions_end = .
+                0x0000000000004618                __app_shmem_regions_end = .
 
 k_p4wq_initparam_area
-                0x0000000000004614        0x0
-                0x0000000000004614                _k_p4wq_initparam_list_start = .
+                0x0000000000004618        0x0
+                0x0000000000004618                _k_p4wq_initparam_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_p4wq_initparam.static.*)))
-                0x0000000000004614                _k_p4wq_initparam_list_end = .
+                0x0000000000004618                _k_p4wq_initparam_list_end = .
 
 _static_thread_data_area
                 0x0000000000004618       0x90
@@ -3772,215 +3773,215 @@ zbus_channel_observation_mask_area
  .debug_info    0x000000000003d275      0x927 zephyr/kernel/libkernel.a(system_work_q.c.obj)
  .debug_info    0x000000000003db9c      0x1e9 zephyr/arch/common/libisr_tables.a(isr_tables.c.obj)
 
-.debug_abbrev   0x0000000000000000     0xc088
+.debug_abbrev   0x0000000000000000     0xc096
  *(SORT_BY_ALIGNMENT(.debug_abbrev))
  .debug_abbrev  0x0000000000000000       0x62 zephyr/CMakeFiles/offsets.dir/./arch/arm/core/offsets/offsets.c.obj
  .debug_abbrev  0x0000000000000062      0x113 app/libapp.a(main.c.obj)
  .debug_abbrev  0x0000000000000175      0x5ab app/libapp.a(sensor.c.obj)
- .debug_abbrev  0x0000000000000720      0x35e app/libapp.a(sensor_sim.c.obj)
- .debug_abbrev  0x0000000000000a7e       0xe2 app/libapp.a(radar_control.c.obj)
- .debug_abbrev  0x0000000000000b60      0x3f1 app/libapp.a(radar_processing.c.obj)
- .debug_abbrev  0x0000000000000f51      0x312 app/libapp.a(radar_display.c.obj)
- .debug_abbrev  0x0000000000001263      0x1cf app/libapp.a(radar_bus.c.obj)
- .debug_abbrev  0x0000000000001432      0x3e4 app/libapp.a(camera_service.c.obj)
- .debug_abbrev  0x0000000000001816      0x1c7 app/libapp.a(plate.c.obj)
- .debug_abbrev  0x00000000000019dd      0x488 zephyr/libzephyr.a(heap.c.obj)
- .debug_abbrev  0x0000000000001e65      0x2f1 zephyr/libzephyr.a(printk.c.obj)
- .debug_abbrev  0x0000000000002156      0x2bc zephyr/libzephyr.a(thread_entry.c.obj)
- .debug_abbrev  0x0000000000002412       0x46 zephyr/libzephyr.a(last_section_id.c.obj)
- .debug_abbrev  0x0000000000002458       0x2e zephyr/libzephyr.a(configs.c.obj)
- .debug_abbrev  0x0000000000002486      0x151 zephyr/libzephyr.a(mem_attr.c.obj)
- .debug_abbrev  0x00000000000025d7      0x2ba zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
- .debug_abbrev  0x0000000000002891      0x104 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi.c.obj)
- .debug_abbrev  0x0000000000002995       0x14 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi_on_reset.S.obj)
- .debug_abbrev  0x00000000000029a9      0x28e zephyr/arch/arch/arm/core/libarch__arm__core.a(tls.c.obj)
- .debug_abbrev  0x0000000000002c37      0x17f zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(exc_exit.c.obj)
- .debug_abbrev  0x0000000000002db6      0x40f zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault.c.obj)
- .debug_abbrev  0x00000000000031c5       0x14 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault_s.S.obj)
- .debug_abbrev  0x00000000000031d9       0x14 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(reset.S.obj)
- .debug_abbrev  0x00000000000031ed      0x227 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread_abort.c.obj)
- .debug_abbrev  0x0000000000003414       0x12 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(swap_helper.S.obj)
- .debug_abbrev  0x0000000000003426      0x28c zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_manage.c.obj)
- .debug_abbrev  0x00000000000036b2      0x167 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(prep_c.c.obj)
- .debug_abbrev  0x0000000000003819      0x365 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread.c.obj)
- .debug_abbrev  0x0000000000003b7e      0x16f zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(cpu_idle.c.obj)
- .debug_abbrev  0x0000000000003ced      0x168 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_init.c.obj)
- .debug_abbrev  0x0000000000003e55      0x13d zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(isr_wrapper.c.obj)
- .debug_abbrev  0x0000000000003f92       0x14 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(__aeabi_read_tp.S.obj)
- .debug_abbrev  0x0000000000003fa6      0x21a zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_core_mpu.c.obj)
- .debug_abbrev  0x00000000000041c0      0x415 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu.c.obj)
- .debug_abbrev  0x00000000000045d5       0xac zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu_regions.c.obj)
- .debug_abbrev  0x0000000000004681      0x205 zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(stdio.c.obj)
- .debug_abbrev  0x0000000000004886      0x443 zephyr/lib/libc/common/liblib__libc__common.a(malloc.c.obj)
- .debug_abbrev  0x0000000000004cc9      0x71f zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
- .debug_abbrev  0x00000000000053e8      0x420 zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
- .debug_abbrev  0x0000000000005808      0x31f zephyr/subsys/random/libsubsys__random.a(random_timer.c.obj)
- .debug_abbrev  0x0000000000005b27      0x688 zephyr/subsys/zbus/libsubsys__zbus.a(zbus.c.obj)
- .debug_abbrev  0x00000000000061af      0x359 zephyr/drivers/console/libdrivers__console.a(uart_console.c.obj)
- .debug_abbrev  0x0000000000006508      0x4ac zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
- .debug_abbrev  0x00000000000069b4      0x360 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
- .debug_abbrev  0x0000000000006d14       0xe7 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(common.c.obj)
- .debug_abbrev  0x0000000000006dfb      0x235 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(pinctrl_arm_mps2.c.obj)
- .debug_abbrev  0x0000000000007030      0x52a zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
- .debug_abbrev  0x000000000000755a      0x4ae zephyr/drivers/timer/libdrivers__timer.a(cortex_m_systick.c.obj)
- .debug_abbrev  0x0000000000007a08      0x1e1 zephyr/kernel/libkernel.a(device.c.obj)
- .debug_abbrev  0x0000000000007be9      0x3c3 zephyr/kernel/libkernel.a(fatal.c.obj)
- .debug_abbrev  0x0000000000007fac      0x6a4 zephyr/kernel/libkernel.a(init.c.obj)
- .debug_abbrev  0x0000000000008650      0x489 zephyr/kernel/libkernel.a(kheap.c.obj)
- .debug_abbrev  0x0000000000008ad9      0x1df zephyr/kernel/libkernel.a(idle.c.obj)
- .debug_abbrev  0x0000000000008cb8      0x4e3 zephyr/kernel/libkernel.a(msg_q.c.obj)
- .debug_abbrev  0x000000000000919b      0x55a zephyr/kernel/libkernel.a(queue.c.obj)
- .debug_abbrev  0x00000000000096f5      0x445 zephyr/kernel/libkernel.a(sem.c.obj)
- .debug_abbrev  0x0000000000009b3a      0x697 zephyr/kernel/libkernel.a(work.c.obj)
- .debug_abbrev  0x000000000000a1d1      0x52a zephyr/kernel/libkernel.a(thread.c.obj)
- .debug_abbrev  0x000000000000a6fb      0x6d4 zephyr/kernel/libkernel.a(sched.c.obj)
- .debug_abbrev  0x000000000000adcf      0x42f zephyr/kernel/libkernel.a(timeslicing.c.obj)
- .debug_abbrev  0x000000000000b1fe       0xd1 zephyr/kernel/libkernel.a(xip.c.obj)
- .debug_abbrev  0x000000000000b2cf      0x4ff zephyr/kernel/libkernel.a(timeout.c.obj)
- .debug_abbrev  0x000000000000b7ce      0x4b7 zephyr/kernel/libkernel.a(mempool.c.obj)
- .debug_abbrev  0x000000000000bc85       0x8f zephyr/kernel/libkernel.a(banner.c.obj)
- .debug_abbrev  0x000000000000bd14      0x244 zephyr/kernel/libkernel.a(system_work_q.c.obj)
- .debug_abbrev  0x000000000000bf58      0x130 zephyr/arch/common/libisr_tables.a(isr_tables.c.obj)
+ .debug_abbrev  0x0000000000000720      0x36c app/libapp.a(sensor_sim.c.obj)
+ .debug_abbrev  0x0000000000000a8c       0xe2 app/libapp.a(radar_control.c.obj)
+ .debug_abbrev  0x0000000000000b6e      0x3f1 app/libapp.a(radar_processing.c.obj)
+ .debug_abbrev  0x0000000000000f5f      0x312 app/libapp.a(radar_display.c.obj)
+ .debug_abbrev  0x0000000000001271      0x1cf app/libapp.a(radar_bus.c.obj)
+ .debug_abbrev  0x0000000000001440      0x3e4 app/libapp.a(camera_service.c.obj)
+ .debug_abbrev  0x0000000000001824      0x1c7 app/libapp.a(plate.c.obj)
+ .debug_abbrev  0x00000000000019eb      0x488 zephyr/libzephyr.a(heap.c.obj)
+ .debug_abbrev  0x0000000000001e73      0x2f1 zephyr/libzephyr.a(printk.c.obj)
+ .debug_abbrev  0x0000000000002164      0x2bc zephyr/libzephyr.a(thread_entry.c.obj)
+ .debug_abbrev  0x0000000000002420       0x46 zephyr/libzephyr.a(last_section_id.c.obj)
+ .debug_abbrev  0x0000000000002466       0x2e zephyr/libzephyr.a(configs.c.obj)
+ .debug_abbrev  0x0000000000002494      0x151 zephyr/libzephyr.a(mem_attr.c.obj)
+ .debug_abbrev  0x00000000000025e5      0x2ba zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
+ .debug_abbrev  0x000000000000289f      0x104 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi.c.obj)
+ .debug_abbrev  0x00000000000029a3       0x14 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi_on_reset.S.obj)
+ .debug_abbrev  0x00000000000029b7      0x28e zephyr/arch/arch/arm/core/libarch__arm__core.a(tls.c.obj)
+ .debug_abbrev  0x0000000000002c45      0x17f zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(exc_exit.c.obj)
+ .debug_abbrev  0x0000000000002dc4      0x40f zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault.c.obj)
+ .debug_abbrev  0x00000000000031d3       0x14 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault_s.S.obj)
+ .debug_abbrev  0x00000000000031e7       0x14 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(reset.S.obj)
+ .debug_abbrev  0x00000000000031fb      0x227 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread_abort.c.obj)
+ .debug_abbrev  0x0000000000003422       0x12 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(swap_helper.S.obj)
+ .debug_abbrev  0x0000000000003434      0x28c zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_manage.c.obj)
+ .debug_abbrev  0x00000000000036c0      0x167 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(prep_c.c.obj)
+ .debug_abbrev  0x0000000000003827      0x365 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread.c.obj)
+ .debug_abbrev  0x0000000000003b8c      0x16f zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(cpu_idle.c.obj)
+ .debug_abbrev  0x0000000000003cfb      0x168 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_init.c.obj)
+ .debug_abbrev  0x0000000000003e63      0x13d zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(isr_wrapper.c.obj)
+ .debug_abbrev  0x0000000000003fa0       0x14 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(__aeabi_read_tp.S.obj)
+ .debug_abbrev  0x0000000000003fb4      0x21a zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_core_mpu.c.obj)
+ .debug_abbrev  0x00000000000041ce      0x415 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu.c.obj)
+ .debug_abbrev  0x00000000000045e3       0xac zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu_regions.c.obj)
+ .debug_abbrev  0x000000000000468f      0x205 zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(stdio.c.obj)
+ .debug_abbrev  0x0000000000004894      0x443 zephyr/lib/libc/common/liblib__libc__common.a(malloc.c.obj)
+ .debug_abbrev  0x0000000000004cd7      0x71f zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
+ .debug_abbrev  0x00000000000053f6      0x420 zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
+ .debug_abbrev  0x0000000000005816      0x31f zephyr/subsys/random/libsubsys__random.a(random_timer.c.obj)
+ .debug_abbrev  0x0000000000005b35      0x688 zephyr/subsys/zbus/libsubsys__zbus.a(zbus.c.obj)
+ .debug_abbrev  0x00000000000061bd      0x359 zephyr/drivers/console/libdrivers__console.a(uart_console.c.obj)
+ .debug_abbrev  0x0000000000006516      0x4ac zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+ .debug_abbrev  0x00000000000069c2      0x360 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+ .debug_abbrev  0x0000000000006d22       0xe7 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(common.c.obj)
+ .debug_abbrev  0x0000000000006e09      0x235 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(pinctrl_arm_mps2.c.obj)
+ .debug_abbrev  0x000000000000703e      0x52a zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+ .debug_abbrev  0x0000000000007568      0x4ae zephyr/drivers/timer/libdrivers__timer.a(cortex_m_systick.c.obj)
+ .debug_abbrev  0x0000000000007a16      0x1e1 zephyr/kernel/libkernel.a(device.c.obj)
+ .debug_abbrev  0x0000000000007bf7      0x3c3 zephyr/kernel/libkernel.a(fatal.c.obj)
+ .debug_abbrev  0x0000000000007fba      0x6a4 zephyr/kernel/libkernel.a(init.c.obj)
+ .debug_abbrev  0x000000000000865e      0x489 zephyr/kernel/libkernel.a(kheap.c.obj)
+ .debug_abbrev  0x0000000000008ae7      0x1df zephyr/kernel/libkernel.a(idle.c.obj)
+ .debug_abbrev  0x0000000000008cc6      0x4e3 zephyr/kernel/libkernel.a(msg_q.c.obj)
+ .debug_abbrev  0x00000000000091a9      0x55a zephyr/kernel/libkernel.a(queue.c.obj)
+ .debug_abbrev  0x0000000000009703      0x445 zephyr/kernel/libkernel.a(sem.c.obj)
+ .debug_abbrev  0x0000000000009b48      0x697 zephyr/kernel/libkernel.a(work.c.obj)
+ .debug_abbrev  0x000000000000a1df      0x52a zephyr/kernel/libkernel.a(thread.c.obj)
+ .debug_abbrev  0x000000000000a709      0x6d4 zephyr/kernel/libkernel.a(sched.c.obj)
+ .debug_abbrev  0x000000000000addd      0x42f zephyr/kernel/libkernel.a(timeslicing.c.obj)
+ .debug_abbrev  0x000000000000b20c       0xd1 zephyr/kernel/libkernel.a(xip.c.obj)
+ .debug_abbrev  0x000000000000b2dd      0x4ff zephyr/kernel/libkernel.a(timeout.c.obj)
+ .debug_abbrev  0x000000000000b7dc      0x4b7 zephyr/kernel/libkernel.a(mempool.c.obj)
+ .debug_abbrev  0x000000000000bc93       0x8f zephyr/kernel/libkernel.a(banner.c.obj)
+ .debug_abbrev  0x000000000000bd22      0x244 zephyr/kernel/libkernel.a(system_work_q.c.obj)
+ .debug_abbrev  0x000000000000bf66      0x130 zephyr/arch/common/libisr_tables.a(isr_tables.c.obj)
 
-.debug_line     0x0000000000000000    0x2016f
+.debug_line     0x0000000000000000    0x2012d
  *(SORT_BY_ALIGNMENT(.debug_line) SORT_BY_ALIGNMENT(.debug_line.*) SORT_BY_ALIGNMENT(.debug_line_end))
  .debug_line    0x0000000000000000      0x153 zephyr/CMakeFiles/offsets.dir/./arch/arm/core/offsets/offsets.c.obj
  .debug_line    0x0000000000000153      0x1f3 app/libapp.a(main.c.obj)
  .debug_line    0x0000000000000346      0x8f7 app/libapp.a(sensor.c.obj)
- .debug_line    0x0000000000000c3d      0x56b app/libapp.a(sensor_sim.c.obj)
- .debug_line    0x00000000000011a8      0x192 app/libapp.a(radar_control.c.obj)
- .debug_line    0x000000000000133a      0x6ab app/libapp.a(radar_processing.c.obj)
- .debug_line    0x00000000000019e5      0x439 app/libapp.a(radar_display.c.obj)
- .debug_line    0x0000000000001e1e      0x374 app/libapp.a(radar_bus.c.obj)
- .debug_line    0x0000000000002192      0x661 app/libapp.a(camera_service.c.obj)
- .debug_line    0x00000000000027f3      0x494 app/libapp.a(plate.c.obj)
- .debug_line    0x0000000000002c87     0x1017 zephyr/libzephyr.a(heap.c.obj)
- .debug_line    0x0000000000003c9e      0x42f zephyr/libzephyr.a(printk.c.obj)
- .debug_line    0x00000000000040cd      0x446 zephyr/libzephyr.a(thread_entry.c.obj)
- .debug_line    0x0000000000004513      0x126 zephyr/libzephyr.a(last_section_id.c.obj)
- .debug_line    0x0000000000004639      0x1dd zephyr/libzephyr.a(configs.c.obj)
- .debug_line    0x0000000000004816      0x279 zephyr/libzephyr.a(mem_attr.c.obj)
- .debug_line    0x0000000000004a8f      0x3fa zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
- .debug_line    0x0000000000004e89      0x200 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi.c.obj)
- .debug_line    0x0000000000005089       0x79 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi_on_reset.S.obj)
- .debug_line    0x0000000000005102      0x46c zephyr/arch/arch/arm/core/libarch__arm__core.a(tls.c.obj)
- .debug_line    0x000000000000556e      0x387 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(exc_exit.c.obj)
- .debug_line    0x00000000000058f5      0x972 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault.c.obj)
- .debug_line    0x0000000000006267       0x86 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault_s.S.obj)
- .debug_line    0x00000000000062ed       0x94 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(reset.S.obj)
- .debug_line    0x0000000000006381      0x46c zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread_abort.c.obj)
- .debug_line    0x00000000000067ed       0xd9 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(swap_helper.S.obj)
- .debug_line    0x00000000000068c6      0x3e5 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_manage.c.obj)
- .debug_line    0x0000000000006cab      0x36a zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(prep_c.c.obj)
- .debug_line    0x0000000000007015      0x5f7 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread.c.obj)
- .debug_line    0x000000000000760c      0x34f zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(cpu_idle.c.obj)
- .debug_line    0x000000000000795b      0x26d zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_init.c.obj)
- .debug_line    0x0000000000007bc8      0x28d zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(isr_wrapper.c.obj)
- .debug_line    0x0000000000007e55       0x87 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(__aeabi_read_tp.S.obj)
- .debug_line    0x0000000000007edc      0x494 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_core_mpu.c.obj)
- .debug_line    0x0000000000008370      0xa79 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu.c.obj)
- .debug_line    0x0000000000008de9      0x1fe zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu_regions.c.obj)
- .debug_line    0x0000000000008fe7      0x302 zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(stdio.c.obj)
- .debug_line    0x00000000000092e9      0x737 zephyr/lib/libc/common/liblib__libc__common.a(malloc.c.obj)
- .debug_line    0x0000000000009a20     0x1465 zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
- .debug_line    0x000000000000ae85     0x18f1 zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
- .debug_line    0x000000000000c776      0x4c9 zephyr/subsys/random/libsubsys__random.a(random_timer.c.obj)
- .debug_line    0x000000000000cc3f     0x1638 zephyr/subsys/zbus/libsubsys__zbus.a(zbus.c.obj)
- .debug_line    0x000000000000e277      0x49e zephyr/drivers/console/libdrivers__console.a(uart_console.c.obj)
- .debug_line    0x000000000000e715      0x8d2 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
- .debug_line    0x000000000000efe7      0x7de zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
- .debug_line    0x000000000000f7c5      0x208 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(common.c.obj)
- .debug_line    0x000000000000f9cd      0x2ec zephyr/drivers/pinctrl/libdrivers__pinctrl.a(pinctrl_arm_mps2.c.obj)
- .debug_line    0x000000000000fcb9      0x944 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
- .debug_line    0x00000000000105fd      0xa26 zephyr/drivers/timer/libdrivers__timer.a(cortex_m_systick.c.obj)
- .debug_line    0x0000000000011023      0x3d4 zephyr/kernel/libkernel.a(device.c.obj)
- .debug_line    0x00000000000113f7      0x6ff zephyr/kernel/libkernel.a(fatal.c.obj)
- .debug_line    0x0000000000011af6      0xcf2 zephyr/kernel/libkernel.a(init.c.obj)
- .debug_line    0x00000000000127e8      0x97f zephyr/kernel/libkernel.a(kheap.c.obj)
- .debug_line    0x0000000000013167      0x382 zephyr/kernel/libkernel.a(idle.c.obj)
- .debug_line    0x00000000000134e9     0x109d zephyr/kernel/libkernel.a(msg_q.c.obj)
- .debug_line    0x0000000000014586     0x14d6 zephyr/kernel/libkernel.a(queue.c.obj)
- .debug_line    0x0000000000015a5c      0xae6 zephyr/kernel/libkernel.a(sem.c.obj)
- .debug_line    0x0000000000016542     0x2a09 zephyr/kernel/libkernel.a(work.c.obj)
- .debug_line    0x0000000000018f4b      0xb49 zephyr/kernel/libkernel.a(thread.c.obj)
- .debug_line    0x0000000000019a94     0x3e2a zephyr/kernel/libkernel.a(sched.c.obj)
- .debug_line    0x000000000001d8be      0x7d4 zephyr/kernel/libkernel.a(timeslicing.c.obj)
- .debug_line    0x000000000001e092      0x192 zephyr/kernel/libkernel.a(xip.c.obj)
- .debug_line    0x000000000001e224     0x1199 zephyr/kernel/libkernel.a(timeout.c.obj)
- .debug_line    0x000000000001f3bd      0x7cd zephyr/kernel/libkernel.a(mempool.c.obj)
- .debug_line    0x000000000001fb8a       0xbb zephyr/kernel/libkernel.a(banner.c.obj)
- .debug_line    0x000000000001fc45      0x3aa zephyr/kernel/libkernel.a(system_work_q.c.obj)
- .debug_line    0x000000000001ffef      0x180 zephyr/arch/common/libisr_tables.a(isr_tables.c.obj)
+ .debug_line    0x0000000000000c3d      0x529 app/libapp.a(sensor_sim.c.obj)
+ .debug_line    0x0000000000001166      0x192 app/libapp.a(radar_control.c.obj)
+ .debug_line    0x00000000000012f8      0x6ab app/libapp.a(radar_processing.c.obj)
+ .debug_line    0x00000000000019a3      0x439 app/libapp.a(radar_display.c.obj)
+ .debug_line    0x0000000000001ddc      0x374 app/libapp.a(radar_bus.c.obj)
+ .debug_line    0x0000000000002150      0x661 app/libapp.a(camera_service.c.obj)
+ .debug_line    0x00000000000027b1      0x494 app/libapp.a(plate.c.obj)
+ .debug_line    0x0000000000002c45     0x1017 zephyr/libzephyr.a(heap.c.obj)
+ .debug_line    0x0000000000003c5c      0x42f zephyr/libzephyr.a(printk.c.obj)
+ .debug_line    0x000000000000408b      0x446 zephyr/libzephyr.a(thread_entry.c.obj)
+ .debug_line    0x00000000000044d1      0x126 zephyr/libzephyr.a(last_section_id.c.obj)
+ .debug_line    0x00000000000045f7      0x1dd zephyr/libzephyr.a(configs.c.obj)
+ .debug_line    0x00000000000047d4      0x279 zephyr/libzephyr.a(mem_attr.c.obj)
+ .debug_line    0x0000000000004a4d      0x3fa zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
+ .debug_line    0x0000000000004e47      0x200 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi.c.obj)
+ .debug_line    0x0000000000005047       0x79 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi_on_reset.S.obj)
+ .debug_line    0x00000000000050c0      0x46c zephyr/arch/arch/arm/core/libarch__arm__core.a(tls.c.obj)
+ .debug_line    0x000000000000552c      0x387 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(exc_exit.c.obj)
+ .debug_line    0x00000000000058b3      0x972 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault.c.obj)
+ .debug_line    0x0000000000006225       0x86 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault_s.S.obj)
+ .debug_line    0x00000000000062ab       0x94 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(reset.S.obj)
+ .debug_line    0x000000000000633f      0x46c zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread_abort.c.obj)
+ .debug_line    0x00000000000067ab       0xd9 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(swap_helper.S.obj)
+ .debug_line    0x0000000000006884      0x3e5 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_manage.c.obj)
+ .debug_line    0x0000000000006c69      0x36a zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(prep_c.c.obj)
+ .debug_line    0x0000000000006fd3      0x5f7 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread.c.obj)
+ .debug_line    0x00000000000075ca      0x34f zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(cpu_idle.c.obj)
+ .debug_line    0x0000000000007919      0x26d zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_init.c.obj)
+ .debug_line    0x0000000000007b86      0x28d zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(isr_wrapper.c.obj)
+ .debug_line    0x0000000000007e13       0x87 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(__aeabi_read_tp.S.obj)
+ .debug_line    0x0000000000007e9a      0x494 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_core_mpu.c.obj)
+ .debug_line    0x000000000000832e      0xa79 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu.c.obj)
+ .debug_line    0x0000000000008da7      0x1fe zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu_regions.c.obj)
+ .debug_line    0x0000000000008fa5      0x302 zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(stdio.c.obj)
+ .debug_line    0x00000000000092a7      0x737 zephyr/lib/libc/common/liblib__libc__common.a(malloc.c.obj)
+ .debug_line    0x00000000000099de     0x1465 zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
+ .debug_line    0x000000000000ae43     0x18f1 zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
+ .debug_line    0x000000000000c734      0x4c9 zephyr/subsys/random/libsubsys__random.a(random_timer.c.obj)
+ .debug_line    0x000000000000cbfd     0x1638 zephyr/subsys/zbus/libsubsys__zbus.a(zbus.c.obj)
+ .debug_line    0x000000000000e235      0x49e zephyr/drivers/console/libdrivers__console.a(uart_console.c.obj)
+ .debug_line    0x000000000000e6d3      0x8d2 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+ .debug_line    0x000000000000efa5      0x7de zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+ .debug_line    0x000000000000f783      0x208 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(common.c.obj)
+ .debug_line    0x000000000000f98b      0x2ec zephyr/drivers/pinctrl/libdrivers__pinctrl.a(pinctrl_arm_mps2.c.obj)
+ .debug_line    0x000000000000fc77      0x944 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+ .debug_line    0x00000000000105bb      0xa26 zephyr/drivers/timer/libdrivers__timer.a(cortex_m_systick.c.obj)
+ .debug_line    0x0000000000010fe1      0x3d4 zephyr/kernel/libkernel.a(device.c.obj)
+ .debug_line    0x00000000000113b5      0x6ff zephyr/kernel/libkernel.a(fatal.c.obj)
+ .debug_line    0x0000000000011ab4      0xcf2 zephyr/kernel/libkernel.a(init.c.obj)
+ .debug_line    0x00000000000127a6      0x97f zephyr/kernel/libkernel.a(kheap.c.obj)
+ .debug_line    0x0000000000013125      0x382 zephyr/kernel/libkernel.a(idle.c.obj)
+ .debug_line    0x00000000000134a7     0x109d zephyr/kernel/libkernel.a(msg_q.c.obj)
+ .debug_line    0x0000000000014544     0x14d6 zephyr/kernel/libkernel.a(queue.c.obj)
+ .debug_line    0x0000000000015a1a      0xae6 zephyr/kernel/libkernel.a(sem.c.obj)
+ .debug_line    0x0000000000016500     0x2a09 zephyr/kernel/libkernel.a(work.c.obj)
+ .debug_line    0x0000000000018f09      0xb49 zephyr/kernel/libkernel.a(thread.c.obj)
+ .debug_line    0x0000000000019a52     0x3e2a zephyr/kernel/libkernel.a(sched.c.obj)
+ .debug_line    0x000000000001d87c      0x7d4 zephyr/kernel/libkernel.a(timeslicing.c.obj)
+ .debug_line    0x000000000001e050      0x192 zephyr/kernel/libkernel.a(xip.c.obj)
+ .debug_line    0x000000000001e1e2     0x1199 zephyr/kernel/libkernel.a(timeout.c.obj)
+ .debug_line    0x000000000001f37b      0x7cd zephyr/kernel/libkernel.a(mempool.c.obj)
+ .debug_line    0x000000000001fb48       0xbb zephyr/kernel/libkernel.a(banner.c.obj)
+ .debug_line    0x000000000001fc03      0x3aa zephyr/kernel/libkernel.a(system_work_q.c.obj)
+ .debug_line    0x000000000001ffad      0x180 zephyr/arch/common/libisr_tables.a(isr_tables.c.obj)
 
-.debug_frame    0x0000000000000000     0x3254
+.debug_frame    0x0000000000000000     0x3258
  *(SORT_BY_ALIGNMENT(.debug_frame))
  .debug_frame   0x0000000000000000       0x20 zephyr/CMakeFiles/offsets.dir/./arch/arm/core/offsets/offsets.c.obj
  .debug_frame   0x0000000000000020       0x28 app/libapp.a(main.c.obj)
  .debug_frame   0x0000000000000048       0xd8 app/libapp.a(sensor.c.obj)
- .debug_frame   0x0000000000000120       0x50 app/libapp.a(sensor_sim.c.obj)
- .debug_frame   0x0000000000000170       0x2c app/libapp.a(radar_control.c.obj)
- .debug_frame   0x000000000000019c       0x74 app/libapp.a(radar_processing.c.obj)
- .debug_frame   0x0000000000000210       0x44 app/libapp.a(radar_display.c.obj)
- .debug_frame   0x0000000000000254       0x34 app/libapp.a(camera_service.c.obj)
- .debug_frame   0x0000000000000288       0x80 app/libapp.a(plate.c.obj)
- .debug_frame   0x0000000000000308      0x2ec zephyr/libzephyr.a(heap.c.obj)
- .debug_frame   0x00000000000005f4       0xbc zephyr/libzephyr.a(printk.c.obj)
- .debug_frame   0x00000000000006b0       0x28 zephyr/libzephyr.a(thread_entry.c.obj)
- .debug_frame   0x00000000000006d8       0x20 zephyr/libzephyr.a(configs.c.obj)
- .debug_frame   0x00000000000006f8       0x30 zephyr/libzephyr.a(mem_attr.c.obj)
- .debug_frame   0x0000000000000728       0x48 zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
- .debug_frame   0x0000000000000770       0x3c zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi.c.obj)
- .debug_frame   0x00000000000007ac       0x30 zephyr/arch/arch/arm/core/libarch__arm__core.a(tls.c.obj)
- .debug_frame   0x00000000000007dc       0x20 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(exc_exit.c.obj)
- .debug_frame   0x00000000000007fc       0x88 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault.c.obj)
- .debug_frame   0x0000000000000884       0x20 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread_abort.c.obj)
- .debug_frame   0x00000000000008a4       0x60 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_manage.c.obj)
- .debug_frame   0x0000000000000904       0x38 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(prep_c.c.obj)
- .debug_frame   0x000000000000093c       0x58 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread.c.obj)
- .debug_frame   0x0000000000000994       0x40 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(cpu_idle.c.obj)
- .debug_frame   0x00000000000009d4       0x20 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_init.c.obj)
- .debug_frame   0x00000000000009f4       0x2c zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(isr_wrapper.c.obj)
- .debug_frame   0x0000000000000a20       0x30 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_core_mpu.c.obj)
- .debug_frame   0x0000000000000a50       0xd4 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu.c.obj)
- .debug_frame   0x0000000000000b24       0x60 zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(stdio.c.obj)
- .debug_frame   0x0000000000000b84       0xf0 zephyr/lib/libc/common/liblib__libc__common.a(malloc.c.obj)
- .debug_frame   0x0000000000000c74      0x2a8 zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
- .debug_frame   0x0000000000000f1c      0x5f8 zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
- .debug_frame   0x0000000000001514       0x38 zephyr/subsys/random/libsubsys__random.a(random_timer.c.obj)
- .debug_frame   0x000000000000154c      0x210 zephyr/subsys/zbus/libsubsys__zbus.a(zbus.c.obj)
- .debug_frame   0x000000000000175c       0x54 zephyr/drivers/console/libdrivers__console.a(uart_console.c.obj)
- .debug_frame   0x00000000000017b0      0x164 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
- .debug_frame   0x0000000000001914       0xa4 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
- .debug_frame   0x00000000000019b8       0x2c zephyr/drivers/pinctrl/libdrivers__pinctrl.a(common.c.obj)
- .debug_frame   0x00000000000019e4       0x2c zephyr/drivers/pinctrl/libdrivers__pinctrl.a(pinctrl_arm_mps2.c.obj)
- .debug_frame   0x0000000000001a10      0x1a0 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
- .debug_frame   0x0000000000001bb0       0xd0 zephyr/drivers/timer/libdrivers__timer.a(cortex_m_systick.c.obj)
- .debug_frame   0x0000000000001c80       0x74 zephyr/kernel/libkernel.a(device.c.obj)
- .debug_frame   0x0000000000001cf4       0x74 zephyr/kernel/libkernel.a(fatal.c.obj)
- .debug_frame   0x0000000000001d68      0x114 zephyr/kernel/libkernel.a(init.c.obj)
- .debug_frame   0x0000000000001e7c      0x128 zephyr/kernel/libkernel.a(kheap.c.obj)
- .debug_frame   0x0000000000001fa4       0x38 zephyr/kernel/libkernel.a(idle.c.obj)
- .debug_frame   0x0000000000001fdc      0x124 zephyr/kernel/libkernel.a(msg_q.c.obj)
- .debug_frame   0x0000000000002100      0x1b8 zephyr/kernel/libkernel.a(queue.c.obj)
- .debug_frame   0x00000000000022b8       0x94 zephyr/kernel/libkernel.a(sem.c.obj)
- .debug_frame   0x000000000000234c      0x390 zephyr/kernel/libkernel.a(work.c.obj)
- .debug_frame   0x00000000000026dc      0x160 zephyr/kernel/libkernel.a(thread.c.obj)
- .debug_frame   0x000000000000283c      0x4ac zephyr/kernel/libkernel.a(sched.c.obj)
- .debug_frame   0x0000000000002ce8       0x90 zephyr/kernel/libkernel.a(timeslicing.c.obj)
- .debug_frame   0x0000000000002d78       0x2c zephyr/kernel/libkernel.a(xip.c.obj)
- .debug_frame   0x0000000000002da4      0x1c4 zephyr/kernel/libkernel.a(timeout.c.obj)
- .debug_frame   0x0000000000002f68       0xf0 zephyr/kernel/libkernel.a(mempool.c.obj)
- .debug_frame   0x0000000000003058       0x20 zephyr/kernel/libkernel.a(banner.c.obj)
- .debug_frame   0x0000000000003078       0x28 zephyr/kernel/libkernel.a(system_work_q.c.obj)
- .debug_frame   0x00000000000030a0       0x28 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(memcpy.c.o)
- .debug_frame   0x00000000000030c8       0x20 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(memset.c.o)
- .debug_frame   0x00000000000030e8       0x20 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(strlen.S.o)
- .debug_frame   0x0000000000003108       0x28 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_string_strnlen.c.o)
- .debug_frame   0x0000000000003130       0x44 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_tinystdio_snprintf.c.o)
- .debug_frame   0x0000000000003174       0x60 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_tinystdio_vflprintf.c.o)
- .debug_frame   0x00000000000031d4       0x20 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_tinystdio_filestrput.c.o)
- .debug_frame   0x00000000000031f4       0x2c /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v7-m/nofp/libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000000000003220       0x34 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000000000000120       0x54 app/libapp.a(sensor_sim.c.obj)
+ .debug_frame   0x0000000000000174       0x2c app/libapp.a(radar_control.c.obj)
+ .debug_frame   0x00000000000001a0       0x74 app/libapp.a(radar_processing.c.obj)
+ .debug_frame   0x0000000000000214       0x44 app/libapp.a(radar_display.c.obj)
+ .debug_frame   0x0000000000000258       0x34 app/libapp.a(camera_service.c.obj)
+ .debug_frame   0x000000000000028c       0x80 app/libapp.a(plate.c.obj)
+ .debug_frame   0x000000000000030c      0x2ec zephyr/libzephyr.a(heap.c.obj)
+ .debug_frame   0x00000000000005f8       0xbc zephyr/libzephyr.a(printk.c.obj)
+ .debug_frame   0x00000000000006b4       0x28 zephyr/libzephyr.a(thread_entry.c.obj)
+ .debug_frame   0x00000000000006dc       0x20 zephyr/libzephyr.a(configs.c.obj)
+ .debug_frame   0x00000000000006fc       0x30 zephyr/libzephyr.a(mem_attr.c.obj)
+ .debug_frame   0x000000000000072c       0x48 zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
+ .debug_frame   0x0000000000000774       0x3c zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi.c.obj)
+ .debug_frame   0x00000000000007b0       0x30 zephyr/arch/arch/arm/core/libarch__arm__core.a(tls.c.obj)
+ .debug_frame   0x00000000000007e0       0x20 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(exc_exit.c.obj)
+ .debug_frame   0x0000000000000800       0x88 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault.c.obj)
+ .debug_frame   0x0000000000000888       0x20 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread_abort.c.obj)
+ .debug_frame   0x00000000000008a8       0x60 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_manage.c.obj)
+ .debug_frame   0x0000000000000908       0x38 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(prep_c.c.obj)
+ .debug_frame   0x0000000000000940       0x58 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread.c.obj)
+ .debug_frame   0x0000000000000998       0x40 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(cpu_idle.c.obj)
+ .debug_frame   0x00000000000009d8       0x20 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_init.c.obj)
+ .debug_frame   0x00000000000009f8       0x2c zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(isr_wrapper.c.obj)
+ .debug_frame   0x0000000000000a24       0x30 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_core_mpu.c.obj)
+ .debug_frame   0x0000000000000a54       0xd4 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu.c.obj)
+ .debug_frame   0x0000000000000b28       0x60 zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(stdio.c.obj)
+ .debug_frame   0x0000000000000b88       0xf0 zephyr/lib/libc/common/liblib__libc__common.a(malloc.c.obj)
+ .debug_frame   0x0000000000000c78      0x2a8 zephyr/lib/net_buf/liblib__net_buf.a(buf.c.obj)
+ .debug_frame   0x0000000000000f20      0x5f8 zephyr/lib/net_buf/liblib__net_buf.a(buf_simple.c.obj)
+ .debug_frame   0x0000000000001518       0x38 zephyr/subsys/random/libsubsys__random.a(random_timer.c.obj)
+ .debug_frame   0x0000000000001550      0x210 zephyr/subsys/zbus/libsubsys__zbus.a(zbus.c.obj)
+ .debug_frame   0x0000000000001760       0x54 zephyr/drivers/console/libdrivers__console.a(uart_console.c.obj)
+ .debug_frame   0x00000000000017b4      0x164 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_cmsdk_ahb.c.obj)
+ .debug_frame   0x0000000000001918       0xa4 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_mmio32.c.obj)
+ .debug_frame   0x00000000000019bc       0x2c zephyr/drivers/pinctrl/libdrivers__pinctrl.a(common.c.obj)
+ .debug_frame   0x00000000000019e8       0x2c zephyr/drivers/pinctrl/libdrivers__pinctrl.a(pinctrl_arm_mps2.c.obj)
+ .debug_frame   0x0000000000001a14      0x1a0 zephyr/drivers/serial/libdrivers__serial.a(uart_cmsdk_apb.c.obj)
+ .debug_frame   0x0000000000001bb4       0xd0 zephyr/drivers/timer/libdrivers__timer.a(cortex_m_systick.c.obj)
+ .debug_frame   0x0000000000001c84       0x74 zephyr/kernel/libkernel.a(device.c.obj)
+ .debug_frame   0x0000000000001cf8       0x74 zephyr/kernel/libkernel.a(fatal.c.obj)
+ .debug_frame   0x0000000000001d6c      0x114 zephyr/kernel/libkernel.a(init.c.obj)
+ .debug_frame   0x0000000000001e80      0x128 zephyr/kernel/libkernel.a(kheap.c.obj)
+ .debug_frame   0x0000000000001fa8       0x38 zephyr/kernel/libkernel.a(idle.c.obj)
+ .debug_frame   0x0000000000001fe0      0x124 zephyr/kernel/libkernel.a(msg_q.c.obj)
+ .debug_frame   0x0000000000002104      0x1b8 zephyr/kernel/libkernel.a(queue.c.obj)
+ .debug_frame   0x00000000000022bc       0x94 zephyr/kernel/libkernel.a(sem.c.obj)
+ .debug_frame   0x0000000000002350      0x390 zephyr/kernel/libkernel.a(work.c.obj)
+ .debug_frame   0x00000000000026e0      0x160 zephyr/kernel/libkernel.a(thread.c.obj)
+ .debug_frame   0x0000000000002840      0x4ac zephyr/kernel/libkernel.a(sched.c.obj)
+ .debug_frame   0x0000000000002cec       0x90 zephyr/kernel/libkernel.a(timeslicing.c.obj)
+ .debug_frame   0x0000000000002d7c       0x2c zephyr/kernel/libkernel.a(xip.c.obj)
+ .debug_frame   0x0000000000002da8      0x1c4 zephyr/kernel/libkernel.a(timeout.c.obj)
+ .debug_frame   0x0000000000002f6c       0xf0 zephyr/kernel/libkernel.a(mempool.c.obj)
+ .debug_frame   0x000000000000305c       0x20 zephyr/kernel/libkernel.a(banner.c.obj)
+ .debug_frame   0x000000000000307c       0x28 zephyr/kernel/libkernel.a(system_work_q.c.obj)
+ .debug_frame   0x00000000000030a4       0x28 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(memcpy.c.o)
+ .debug_frame   0x00000000000030cc       0x20 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(memset.c.o)
+ .debug_frame   0x00000000000030ec       0x20 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(strlen.S.o)
+ .debug_frame   0x000000000000310c       0x28 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_string_strnlen.c.o)
+ .debug_frame   0x0000000000003134       0x44 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_tinystdio_snprintf.c.o)
+ .debug_frame   0x0000000000003178       0x60 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_tinystdio_vflprintf.c.o)
+ .debug_frame   0x00000000000031d8       0x20 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7-m/nofp/libc.a(libc_tinystdio_filestrput.c.o)
+ .debug_frame   0x00000000000031f8       0x2c /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v7-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000000000003224       0x34 /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
 
 .debug_str      0x0000000000000000     0x880c
  *(SORT_BY_ALIGNMENT(.debug_str))

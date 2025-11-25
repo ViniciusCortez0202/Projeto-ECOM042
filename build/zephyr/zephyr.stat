@@ -10,7 +10,7 @@ ELF Header:
   Version:                           0x1
   Entry point address:               0xa59
   Start of program headers:          52 (bytes into file)
-  Start of section headers:          696036 (bytes into file)
+  Start of section headers:          695988 (bytes into file)
   Flags:                             0x5000200, Version5 EABI, soft-float ABI
   Size of this header:               52 (bytes)
   Size of program headers:           32 (bytes)
@@ -23,11 +23,11 @@ Section Headers:
   [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
   [ 0]                   NULL            00000000 000000 000000 00      0   0  0
   [ 1] rom_start         PROGBITS        00000000 0000f8 0000c0 00  AX  0   0  4
-  [ 2] text              PROGBITS        000000c0 0001b8 00428c 00  AX  0   0  4
-  [ 3] .ARM.exidx        ARM_EXIDX       0000434c 004444 000008 00  AL  2   0  4
-  [ 4] initlevel         PROGBITS        00004354 00444c 000080 00   A  0   0  4
-  [ 5] device_area       PROGBITS        000043d4 0044cc 000140 00   A  0   0  4
-  [ 6] sw_isr_table      PROGBITS        00004514 00460c 000100 00   A  0   0  4
+  [ 2] text              PROGBITS        000000c0 0001b8 004290 00  AX  0   0  4
+  [ 3] .ARM.exidx        ARM_EXIDX       00004350 004448 000008 00  AL  2   0  4
+  [ 4] initlevel         PROGBITS        00004358 004450 000080 00   A  0   0  4
+  [ 5] device_area       PROGBITS        000043d8 0044d0 000140 00   A  0   0  4
+  [ 6] sw_isr_table      PROGBITS        00004518 004610 000100 00   A  0   0  4
   [ 7] _static_thre[...] PROGBITS        00004618 004710 000090 00  WA  0   0  8
   [ 8] gpio_driver_[...] PROGBITS        000046a8 0047a0 000048 00   A  0   0  4
   [ 9] uart_driver_[...] PROGBITS        000046f0 0047e8 00004c 00   A  0   0  4
@@ -47,19 +47,19 @@ Section Headers:
   [23] .comment          PROGBITS        00000000 004d2c 000020 01  MS  0   0  1
   [24] .debug_aranges    PROGBITS        00000000 004d50 0014f0 00      0   0  8
   [25] .debug_info       PROGBITS        00000000 006240 03dd3f 00      0   0  1
-  [26] .debug_abbrev     PROGBITS        00000000 043f7f 00c086 00      0   0  1
-  [27] .debug_line       PROGBITS        00000000 050005 020180 00      0   0  1
-  [28] .debug_frame      PROGBITS        00000000 070188 003254 00      0   0  4
-  [29] .debug_str        PROGBITS        00000000 0733dc 0087f9 01  MS  0   0  1
-  [30] .debug_loc        PROGBITS        00000000 07bbd5 01bbd0 00      0   0  1
-  [31] .debug_ranges     PROGBITS        00000000 0977a8 004fc8 00      0   0  8
-  [32] .ARM.attributes   ARM_ATTRIBUTES  00000000 09c770 000031 00      0   0  1
+  [26] .debug_abbrev     PROGBITS        00000000 043f7f 00c094 00      0   0  1
+  [27] .debug_line       PROGBITS        00000000 050013 02013e 00      0   0  1
+  [28] .debug_frame      PROGBITS        00000000 070154 003258 00      0   0  4
+  [29] .debug_str        PROGBITS        00000000 0733ac 0087f9 01  MS  0   0  1
+  [30] .debug_loc        PROGBITS        00000000 07bba5 01bbd0 00      0   0  1
+  [31] .debug_ranges     PROGBITS        00000000 097778 004fc8 00      0   0  8
+  [32] .ARM.attributes   ARM_ATTRIBUTES  00000000 09c740 000031 00      0   0  1
   [33] .last_section     PROGBITS        00004c30 004d28 000004 00  WA  0   0  4
   [34] bss               NOBITS          20000158 004d30 0004df 00  WA  0   0  8
   [35] noinit            NOBITS          20000638 004d30 002b40 00  WA  0   0  8
-  [36] .symtab           SYMTAB          00000000 09c7a4 006d50 10     37 870  4
-  [37] .strtab           STRTAB          00000000 0a34f4 0067fb 00      0   0  1
-  [38] .shstrtab         STRTAB          00000000 0a9cef 0001f4 00      0   0  1
+  [36] .symtab           SYMTAB          00000000 09c774 006d50 10     37 870  4
+  [37] .strtab           STRTAB          00000000 0a34c4 0067fb 00      0   0  1
+  [38] .shstrtab         STRTAB          00000000 0a9cbf 0001f4 00      0   0  1
 Key to Flags:
   W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
   L (link order), O (extra OS processing required), G (group), T (TLS),
@@ -68,7 +68,7 @@ Key to Flags:
 
 Program Headers:
   Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
-  EXIDX          0x004444 0x0000434c 0x0000434c 0x00008 0x00008 R   0x4
+  EXIDX          0x004448 0x00004350 0x00004350 0x00008 0x00008 R   0x4
   LOAD           0x0000f8 0x00000000 0x00000000 0x04ad8 0x04ad8 RWE 0x8
   LOAD           0x004bd0 0x20000000 0x00004ad8 0x00155 0x00155 RW  0x8
   LOAD           0x004d28 0x00004c30 0x00004c30 0x00004 0x00004 RW  0x4

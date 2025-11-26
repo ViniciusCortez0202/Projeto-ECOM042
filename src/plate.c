@@ -1,43 +1,53 @@
 #include "plate.h"
 #include <stddef.h>
-#include <zephyr/random/random.h>
+#include <regex.h>
 
-static bool is_upper(char c) { return (c >= 'A' && c <= 'Z'); }
-static bool is_digit(char c) { return (c >= '0' && c <= '9'); }
-
-bool plate_is_valid_mercosul(const char *p)
+bool plate_is_valid_mercosul(const char *plate)
 {
-	if (!p) return false;
+	return plate_is_br(plate) || plate_is_ar(plate) || plate_is_py(plate) ||
+	       plate_is_uy(plate) || plate_is_bo(plate);
+}
 
-	for (int i = 0; i < 7; i++) {
-		if (p[i] == '\0') return false;
+
+static bool plate_match_pattern(const char *plate, const char *pattern)
+{
+	regex_t rx;
+	int rc = regcomp(&rx, pattern, REG_EXTENDED | REG_NOSUB);
+	if (rc != 0) {
+		return false;
 	}
-	if (p[7] != '\0') return false;
 
-	return is_upper(p[0]) && is_upper(p[1]) && is_upper(p[2]) &&
-	       is_digit(p[3]) &&
-	       is_upper(p[4]) &&
-	       is_digit(p[5]) && is_digit(p[6]);
+	bool ok = (regexec(&rx, plate, 0, NULL, 0) == 0);
+	regfree(&rx);
+	return ok;
 }
 
-static char rand_letter(void) { return (char)('A' + (sys_rand32_get() % 26U)); }
-static char rand_digit(void)  { return (char)('0' + (sys_rand32_get() % 10U)); }
-
-void plate_generate_mercosul(char out[8])
+/* Brasil */
+bool plate_is_br(const char *plate)
 {
-	out[0] = rand_letter();
-	out[1] = rand_letter();
-	out[2] = rand_letter();
-	out[3] = rand_digit();
-	out[4] = rand_letter();
-	out[5] = rand_digit();
-	out[6] = rand_digit();
-	out[7] = '\0';
+	return plate_match_pattern(plate, "^[A-Z]{3}[0-9]{1}[A-Z]{1}[0-9]{2}$");
 }
 
-void plate_generate_invalid(char out[8])
+/* Argentina */
+bool plate_is_ar(const char *plate)
 {
-	/* Gera uma válida e quebra a regra (posição 4 deveria ser letra) */
-	plate_generate_mercosul(out);
-	out[4] = rand_digit(); /* agora fica inválida */
+	return plate_match_pattern(plate, "^[A-Z]{2} [0-9]{3} [A-Z]{2}$");
+}
+
+/* Paraguai */
+bool plate_is_py(const char *plate)
+{
+	return plate_match_pattern(plate, "^([A-Z]{4} [0-9]{3}|[0-9]{3} [A-Z]{4})$");
+}
+
+/* Uruguai */
+bool plate_is_uy(const char *plate)
+{
+	return plate_match_pattern(plate, "^[A-Z]{3} [0-9]{4}$");
+}
+
+/* Bolivia */
+bool plate_is_bo(const char *plate)
+{
+	return plate_match_pattern(plate, "^[A-Z]{2} [0-9]{5}$");
 }

@@ -2078,6 +2078,7 @@
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/Kconfig/soc/Kconfig
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/Kconfig/soc/Kconfig.defconfig
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/Kconfig/soc/Kconfig.soc
+/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/modules/camera_service/Kconfig.camera_service
 /Users/viniciuscortez/zephyrproject/zephyr/soc/Kconfig
 /Users/viniciuscortez/zephyrproject/zephyr/soc/Kconfig.v2
 /Users/viniciuscortez/zephyrproject/zephyr/soc/adi/max32/Kconfig

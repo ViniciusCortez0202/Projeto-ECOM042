@@ -470,6 +470,25 @@ rule C_STATIC_LIBRARY_LINKER__drivers__timer_
 #############################################
 # Rule for compiling C files.
 
+rule C_COMPILER__samples__projeto__modules__camera_service_unscanned_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache ${LAUNCHER}${CODE_CHECK}/Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__samples__projeto__modules__camera_service_
+  command = $PRE_LINK && ccache /opt/homebrew/bin/cmake -E rm -f $TARGET_FILE && ccache /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /Users/viniciuscortez/zephyr-sdk-0.17.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && ccache /opt/homebrew/bin/cmake -E touch $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
 rule C_COMPILER__kernel_unscanned_
   depfile = $DEP_FILE
   deps = gcc

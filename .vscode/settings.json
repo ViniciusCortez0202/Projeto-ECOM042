@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "radar_bus.h": "c"
+        "radar_bus.h": "c",
+        "radar_processing.h": "c",
+        "radar_display.h": "c",
+        "vehicle_status_service.h": "c",
+        "vehicle_infraction_plate.h": "c"
     }
 }

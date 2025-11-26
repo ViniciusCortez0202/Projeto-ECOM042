@@ -347,6 +347,9 @@
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/uoscore-uedhoc/CMakeFiles/rebuild_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/zcbor/CMakeFiles/edit_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/zcbor/CMakeFiles/rebuild_cache.dir
+/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/camera_service/CMakeFiles/samples__projeto__modules__camera_service.dir
+/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/camera_service/CMakeFiles/edit_cache.dir
+/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/camera_service/CMakeFiles/rebuild_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/nrf_hw_models/CMakeFiles/edit_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/nrf_hw_models/CMakeFiles/rebuild_cache.dir
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/kernel/CMakeFiles/kernel.dir

@@ -53,6 +53,6 @@ cmake:
     zephyr-base: '/Users/viniciuscortez/zephyrproject/zephyr'
 version: '0.1.0'
 west:
-  command: '/Users/viniciuscortez/miniconda3/bin/west build -b mps2/an385 .'
+  command: '/Users/viniciuscortez/miniconda3/bin/west build -t run'
   topdir: '/Users/viniciuscortez/zephyrproject'
   version: '1.5.0'

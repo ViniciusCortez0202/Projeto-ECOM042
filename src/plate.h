@@ -5,7 +5,10 @@
 
 bool plate_is_valid_mercosul(const char *plate);
 
-void plate_generate_mercosul(char out[8]);
-void plate_generate_invalid(char out[8]);
+bool plate_is_br(const char *plate);
+bool plate_is_ar(const char *plate);
+bool plate_is_py(const char *plate);
+bool plate_is_uy(const char *plate);
+bool plate_is_bo(const char *plate);
 
 #endif /* PLATE_H */

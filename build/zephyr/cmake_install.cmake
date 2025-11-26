@@ -339,6 +339,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/camera_service/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/nrf_hw_models/cmake_install.cmake")
 endif()
 

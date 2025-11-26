@@ -5,7 +5,6 @@
 #include "radar_processing.h"
 #include "radar_control.h"
 #include "radar_display.h"
-#include "radar_bus.h"
 
 LOG_MODULE_DECLARE(radar);
 
@@ -25,6 +24,7 @@ struct vehicle_context {
 };
 
 static struct vehicle_context ctx;
+int32_t radar_stop_timeout = 500;
 
 // Volta o estado para os valores iniciais
 static void vehicle_context_reset(struct vehicle_context *c)
@@ -42,22 +42,6 @@ static int32_t compute_speed_kmh(uint32_t distance_mm, uint32_t delta_ms)
 	}
 
 	return (int32_t)((distance_mm * 36U) / (delta_ms * 10U));
-}
-
-// Publica no canal de que veiculo cometeu uma infração
-static void publish_infraction(enum vehicle_type type, int32_t speed_kmh, int32_t limit_kmh)
-{
-	struct radar_infraction_msg msg = {
-		.vehicle_type = type,
-		.speed_kmh = speed_kmh,
-		.limit_kmh = limit_kmh,
-		.timestamp_ms = k_uptime_get_32(),
-	};
-
-	int err = zbus_chan_pub(&chan_radar_infraction, &msg, K_NO_WAIT);
-	if (err) {
-		LOG_ERR("Falha ao publicar no canal: %d", err);
-	}
 }
 
 static void finalize_vehicle_work(struct k_work *work)
@@ -104,10 +88,6 @@ static void finalize_vehicle_work(struct k_work *work)
 
 	radar_display_show(&disp);
 
-	if (res.status == RADAR_STATUS_INFRACTION) {
-		publish_infraction(vtype, speed_kmh, res.limit_kmh);
-	}
-
 	vehicle_context_reset(&ctx);
 }
 
@@ -125,28 +105,26 @@ void radar_process_sensor_event(const struct sensor_event *evt)
 			ctx.axle_count = 1;
 			ctx.start_time_ms = evt->timestamp_ms;
 			ctx.sensor2_seen = false;
-
-			/* agenda finalização para 500ms */
-			k_work_reschedule(&ctx.finalize_work, K_MSEC(500));
+		
+			k_work_reschedule(&ctx.finalize_work, K_MSEC(radar_stop_timeout));
 		}
 		break;
 
 	case VEHICLE_STATE_TRACKING:
-		/* Conta eixos somente no sensor 1 */
 		if (evt->sensor_id == 1 && evt->level == 1) {
 			ctx.axle_count++;
-
-			/* reinicia janela de 500ms: ainda tem eixos chegando */
-			k_work_reschedule(&ctx.finalize_work, K_MSEC(500));
+			
+			k_work_reschedule(&ctx.finalize_work, K_MSEC(radar_stop_timeout));
 		}
-
-		/* Marca o PRIMEIRO momento que o veículo chega no sensor 2 */
+		
 		if (evt->sensor_id == 2 && evt->level == 1 && !ctx.sensor2_seen) {
 			ctx.sensor2_seen = true;
 			ctx.sensor2_time_ms = evt->timestamp_ms;
+			radar_stop_timeout = evt->timestamp_ms - ctx.sensor2_time_ms + 50;
 		}
 		break;
 	}
+
 }
 
 void radar_processing_init(void)

@@ -5,7 +5,7 @@
 
 LOG_MODULE_DECLARE(radar);
 
-#define BETWEEN_VEHICLES_S     5
+#define BETWEEN_VEHICLES_S     25
 #define VEHICLE_END_SILENCE_MS 600
 
 static void pulse_sensor(uint8_t sensor_id)
@@ -30,23 +30,38 @@ static void sensor_sim_thread(void *a, void *b, void *c)
 	ARG_UNUSED(b);
 	ARG_UNUSED(c);
 
-	// Veiculo leve normal
-	emit_vehicle(2, 120);
+	while (1) {
 
-	// Veiculo leve com atenção
-	emit_vehicle(2, 40);
+		// Veiculo leve normal
+		emit_vehicle(2, 120);
 
-	// Veiculo leve com infração
-	emit_vehicle(2, 20);
+		K_MSEC(BETWEEN_VEHICLES_S);
 
-	// Veiculo pesado normal
-	emit_vehicle(3, 120);
+		// Veiculo leve com atenção
+		emit_vehicle(2, 40);
 
-	// Veiculo pesado  com atenção
-	emit_vehicle(3, 50);
+		K_MSEC(BETWEEN_VEHICLES_S);
 
-	// Veiculo pesado  com infração
-	emit_vehicle(3, 20);
+		// Veiculo leve com infração
+		emit_vehicle(2, 20);
+
+		K_MSEC(BETWEEN_VEHICLES_S);
+
+		// Veiculo pesado normal
+		emit_vehicle(3, 120);
+
+		K_MSEC(BETWEEN_VEHICLES_S);
+
+		// Veiculo pesado  com atenção
+		emit_vehicle(3, 50);
+
+		K_MSEC(BETWEEN_VEHICLES_S);
+
+		// Veiculo pesado  com infração
+		emit_vehicle(3, 20);
+
+		K_MSEC(BETWEEN_VEHICLES_S);
+	}
 }
 
 K_THREAD_DEFINE(sensor_sim_thread_id, 1024, sensor_sim_thread, NULL, NULL, NULL, 6, 0, 0);

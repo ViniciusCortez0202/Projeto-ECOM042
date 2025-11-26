@@ -23,7 +23,7 @@ config RADAR_WARNING_THRESHOLD_PERCENT
 
 config RADAR_CAMERA_FAILURE_RATE_PERCENT
     int "Chance de falha da câmera (%)"
-    default 10
+    default 90
     range 0 100
 
 endmenu

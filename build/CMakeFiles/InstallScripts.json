@@ -147,6 +147,7 @@
 		"/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/trusted-firmware-m/cmake_install.cmake",
 		"/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/uoscore-uedhoc/cmake_install.cmake",
 		"/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/zcbor/cmake_install.cmake",
+		"/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/camera_service/cmake_install.cmake",
 		"/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/modules/nrf_hw_models/cmake_install.cmake",
 		"/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/kernel/cmake_install.cmake",
 		"/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/cmake/flash/cmake_install.cmake",

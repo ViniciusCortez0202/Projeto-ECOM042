@@ -3,6 +3,7 @@
 
 #include "radar_control.h"
 #include <stdint.h>
+#include <stdbool.h>
 
 struct radar_display_data {
     enum vehicle_type type;

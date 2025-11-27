@@ -6,7 +6,6 @@
 
 #include "radar_display.h"
 #include "radar_processing.h"
-#include "vehicle_infraction_plate.h"
 
 /*
 	Cores do display
@@ -128,11 +127,4 @@ void radar_display_show(const struct radar_display_data *data)
 		Imprime no console o status e informações do veículo
 	*/
 	printk("%s[RADAR] %s%s\n", status_color(data->status), line, ANSI_RESET);
-
-	/*
-		Caso o veículo tenha cometido a infração ele dispara a captura de placa
-	*/
-	if (data->status == RADAR_STATUS_INFRACTION) {
-		handler_plate_infraction();
-	}
 }

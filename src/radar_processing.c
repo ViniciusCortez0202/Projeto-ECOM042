@@ -5,6 +5,7 @@
 #include "radar_processing.h"
 #include "radar_display.h"
 #include "sensor.h"
+#include "vehicle_infraction_plate.h"
 
 #define VEHICLE_LENGTH_MM 5000
 
@@ -135,6 +136,12 @@ static void finalize_vehicle_work(struct k_work *work)
 	struct radar_display_data disp;
 	if (compute_vehicle_status(&disp) == 0) {
 		radar_display_show(&disp);
+	}
+	/*
+		Caso o veículo tenha cometido a infração ele dispara a captura de placa
+	*/
+	if (disp.status == RADAR_STATUS_INFRACTION) {
+		handler_plate_infraction();
 	}
 
 	vehicle_context_reset(&ctx);

@@ -8,21 +8,21 @@ ZTEST(app_tests, test_computed_speed_normal)
 {
     int32_t speed = compute_speed_kmh(1000, 120);
 
-    zassert_equal(speed, 30, "should return 30km/h");
+    zassert_equal(speed, 30, NULL);
 }
 
 ZTEST(app_tests, test_computed_speed_attention)
 {
     int32_t speed = compute_speed_kmh(1000, 40);
 
-    zassert_equal(speed, 90, "should return 90km/h");
+    zassert_equal(speed, 90, NULL);
 }
 
 ZTEST(app_tests, test_computed_speed_infraction)
 {
     int32_t speed = compute_speed_kmh(1000, 20);
 
-    zassert_equal(speed, 180, "should return 180km/h");
+    zassert_equal(speed, 180, NULL);
 }
 
 ZTEST(app_tests, test_computed_vehicle_type_light)
@@ -46,7 +46,7 @@ ZTEST(app_tests, test_computed_vehicle_type_light)
 
 	compute_vehicle_status(&disp);
 
-    zassert_equal(disp.type, VEHICLE_TYPE_LIGHT, "should be leight");
+    zassert_equal(disp.type, VEHICLE_TYPE_LIGHT, NULL);
 }
 
 ZTEST(app_tests, test_computed_vehicle_type_heavy)
@@ -71,7 +71,7 @@ ZTEST(app_tests, test_computed_vehicle_type_heavy)
 
 	compute_vehicle_status(&disp);
 
-    zassert_equal(disp.type, VEHICLE_TYPE_HEAVY, "should be leight");
+    zassert_equal(disp.type, VEHICLE_TYPE_HEAVY, NULL);
 }
 
 ZTEST(app_tests, test_computed_vehicle_status_normal_to_light_vehicle)
@@ -95,7 +95,7 @@ ZTEST(app_tests, test_computed_vehicle_status_normal_to_light_vehicle)
 
 	compute_vehicle_status(&disp);
 
-    zassert_equal(disp.status, RADAR_STATUS_NORMAL, "should be normal");
+    zassert_equal(disp.status, RADAR_STATUS_NORMAL, NULL);
 }
 
 ZTEST(app_tests, test_computed_vehicle_status_attention_to_light_vehicle)
@@ -119,7 +119,7 @@ ZTEST(app_tests, test_computed_vehicle_status_attention_to_light_vehicle)
     
 	compute_vehicle_status(&disp);
 
-    zassert_equal(disp.status, RADAR_STATUS_WARNING, "should be warning");
+    zassert_equal(disp.status, RADAR_STATUS_WARNING, NULL);
 }
 
 ZTEST(app_tests, test_computed_vehicle_status_infraction_to_light_vehicle)
@@ -143,7 +143,7 @@ ZTEST(app_tests, test_computed_vehicle_status_infraction_to_light_vehicle)
 
 	compute_vehicle_status(&disp);
 
-    zassert_equal(disp.status, RADAR_STATUS_INFRACTION, "should be infraction");
+    zassert_equal(disp.status, RADAR_STATUS_INFRACTION, NULL);
 }
 
 ZTEST(app_tests, test_computed_vehicle_status_normal_to_heavy_vehicle)
@@ -168,7 +168,7 @@ ZTEST(app_tests, test_computed_vehicle_status_normal_to_heavy_vehicle)
 
 	compute_vehicle_status(&disp);
 
-    zassert_equal(disp.status, RADAR_STATUS_NORMAL, "should be normal");
+    zassert_equal(disp.status, RADAR_STATUS_NORMAL, NULL);
 }
 
 ZTEST(app_tests, test_computed_vehicle_status_attention_to_heavy_vehicle)
@@ -193,7 +193,7 @@ ZTEST(app_tests, test_computed_vehicle_status_attention_to_heavy_vehicle)
     
 	compute_vehicle_status(&disp);
 
-    zassert_equal(disp.status, RADAR_STATUS_WARNING, "should be warning");
+    zassert_equal(disp.status, RADAR_STATUS_WARNING, NULL);
 }
 
 ZTEST(app_tests, test_computed_vehicle_status_infraction_to_heavy_vehicle)
@@ -218,5 +218,5 @@ ZTEST(app_tests, test_computed_vehicle_status_infraction_to_heavy_vehicle)
 
 	compute_vehicle_status(&disp);
 
-    zassert_equal(disp.status, RADAR_STATUS_INFRACTION, "should be infraction");
+    zassert_equal(disp.status, RADAR_STATUS_INFRACTION, NULL);
 }

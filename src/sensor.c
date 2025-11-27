@@ -8,12 +8,13 @@
 
 LOG_MODULE_DECLARE(radar);
 
-// Define pinos do GPIO
+/*
+    Definicição dos pinos utilizados no GPIO
+*/
 #define SENSOR_GPIO_NODE DT_NODELABEL(gpio0)
 #define SENSOR1_PIN      5
 #define SENSOR2_PIN      6
 
-//Fila de mensagem para comunicação do GIOP
 K_MSGQ_DEFINE(sensor_msgq, sizeof(struct sensor_event), 16, 4);
 
 static const struct device *sensor_gpio_dev = DEVICE_DT_GET(SENSOR_GPIO_NODE);
@@ -31,7 +32,9 @@ void sensor_send_event(uint8_t sensor_id, uint8_t level)
     k_msgq_put(&sensor_msgq, &evt, K_FOREVER);
 }
 
-//Função de interupção para capturar os valores dos pinos
+/*
+    Função de interupção para o GPIO
+*/
 static void sensor_gpio_isr(const struct device *dev,
                             struct gpio_callback *cb,
                             uint32_t pins)
@@ -49,7 +52,10 @@ static void sensor_gpio_isr(const struct device *dev,
     }
 }
 
-// Thread responsável por capturar os valores da fila de mensagem enviada pela interupção do sensores. Após isso, envia para o proessamento
+/*
+    Thread responsável por obter as saidas da fila de mesagem
+    quando são enviadas pela interupção do GPIO
+*/
 static void sensor_thread(void *arg1, void *arg2, void *arg3)
 {
     struct sensor_event evt;
@@ -73,8 +79,8 @@ K_THREAD_DEFINE(sensor_thread_id,
                 NULL, NULL, NULL,
                 5, 0, 0);
 
-// Inicializador dos sensores
-int sensor_init(void)
+
+int sensor_init()
 {
     int ret;
 

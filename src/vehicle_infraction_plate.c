@@ -18,13 +18,18 @@ void handler_plate_infraction()
 	int err;
 	const struct zbus_channel *chan;
 	
+	/*
+		Faz a chamada para o serviço de camera 
+		e espera o retorno via zbus com as informações 
+		da placa do veículo infrator
+	*/
 	err = camera_api_capture(K_FOREVER);
 	if (err) {
 		LOG_ERR("Erro ao iniciar a camera. Erro: %d\n", err);
 		return;
 	}
 
-	const struct msg_camera_evt rsp;
+	struct msg_camera_evt rsp;
 
 	err = zbus_sub_wait_msg(&msub_camera_evt, &chan, &rsp, K_FOREVER);
 	if (err) {

@@ -3,15 +3,27 @@
 
 #include <stdint.h>
 
+/*
+    Estrutura responsável por transmitir e qual sensor foi acionado.
+*/
 struct sensor_event {
-    uint8_t sensor_id;     // 1 or 2
-    uint8_t level;         // 0 or 1
-    uint32_t timestamp_ms; // k_uptime_get_32()
+    uint8_t sensor_id;
+    uint8_t level;
+    uint32_t timestamp_ms;
 };
 
-int sensor_init(void);
+/*
+    Inicializa os sensores.
+*/
+int sensor_init();
 
 
+/*
+    Recebe os dados do sensor que foi acionado e publica na fila a estrutura acima.
+
+    @param sensor_id Identificador do sensor
+    @param estado do sensor
+*/
 void sensor_send_event(uint8_t sensor_id, uint8_t level);
 
 #endif /* RADAR_SENSOR_H */

@@ -32,7 +32,7 @@ Como construir e rodar
 **********************
 
 ```
-west build -b mps2/an385 -p auto
+west build -b mps2/an385 -p always
 west build -t run
 
 ```

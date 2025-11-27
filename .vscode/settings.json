@@ -6,6 +6,10 @@
         "vehicle_status_service.h": "c",
         "vehicle_infraction_plate.h": "c",
         "plate.h": "c",
-        "radar_control.h": "c"
-    }
+        "radar_control.h": "c",
+        "sensor.h": "c"
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python-envs.pythonProjects": []
 }

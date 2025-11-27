@@ -5,9 +5,12 @@
 #include <string.h>
 
 #include "radar_display.h"
-#include "radar_control.h"
+#include "radar_processing.h"
 #include "vehicle_infraction_plate.h"
 
+/*
+	Cores do display
+*/
 #define ANSI_RED    "\x1b[31m"
 #define ANSI_YELLOW "\x1b[33m"
 #define ANSI_GREEN  "\x1b[32m"
@@ -21,7 +24,7 @@
 
 static const struct device *disp_dev;
 
-int radar_display_init(void)
+int radar_display_init()
 {
 	if (DISPLAY_LABEL == NULL) {
 		disp_dev = NULL;
@@ -43,14 +46,14 @@ int radar_display_init(void)
 	return 0;
 }
 
-static const char *vehicle_type_str(enum vehicle_type t)
+char *vehicle_type_str(enum vehicle_type type)
 {
-	return (t == VEHICLE_TYPE_HEAVY) ? "PESADO" : "LEVE";
+	return (type == VEHICLE_TYPE_HEAVY) ? "PESADO" : "LEVE";
 }
 
-static const char *status_str(enum radar_infraction_status s)
+char *status_str(enum radar_infraction_status status)
 {
-	switch (s) {
+	switch (status) {
 	case RADAR_STATUS_NORMAL:
 		return "NORMAL";
 	case RADAR_STATUS_WARNING:
@@ -62,7 +65,7 @@ static const char *status_str(enum radar_infraction_status s)
 	}
 }
 
-static const char *status_color(enum radar_infraction_status s)
+char *status_color(enum radar_infraction_status s)
 {
 	switch (s) {
 	case RADAR_STATUS_NORMAL:
@@ -76,6 +79,9 @@ static const char *status_color(enum radar_infraction_status s)
 	}
 }
 
+/*
+	Escreve no display utilizando o driver do zephyr
+*/
 static void update_dummy_display(const char *line)
 {
 	if (!disp_dev) {
@@ -108,13 +114,24 @@ void radar_display_show(const struct radar_display_data *data)
 
 	char line[128];
 
+	/*
+		Formata a saida do display
+	*/
 	snprintk(line, sizeof(line), "Veiculo=%s eixos=%u velocidade=%d limite=%d status=%s",
 		 vehicle_type_str(data->type), data->axle_count, data->measured_speed_kmh,
 		 data->limit_kmh, status_str(data->status));
 
 	update_dummy_display(line);
 
+
+	/* 
+		Imprime no console o status e informações do veículo
+	*/
 	printk("%s[RADAR] %s%s\n", status_color(data->status), line, ANSI_RESET);
+
+	/*
+		Caso o veículo tenha cometido a infração ele dispara a captura de placa
+	*/
 	if (data->status == RADAR_STATUS_INFRACTION) {
 		handler_plate_infraction();
 	}

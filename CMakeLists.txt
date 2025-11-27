@@ -11,7 +11,6 @@ target_sources(app PRIVATE
         src/main.c
         src/sensor.c
         src/sensor_sim.c
-        src/radar_control.c
         src/radar_processing.c
         src/radar_display.c
         src/vehicle_infraction_plate.c

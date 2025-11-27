@@ -1,7 +1,6 @@
 #include <zephyr/ztest.h>
 #include "radar_processing.h"
 #include "radar_display.h"
-#include "radar_control.h"
 #include "sensor.h"
 
 
@@ -41,7 +40,7 @@ ZTEST(app_tests, test_computed_vehicle_type_light)
     evt.level = 1;
     evt.timestamp_ms += 120;
 
-    add_sensor2(&evt);
+    register_timestamp_sensor2(&evt);
 
     struct radar_display_data disp;
 
@@ -66,7 +65,7 @@ ZTEST(app_tests, test_computed_vehicle_type_heavy)
     evt.level = 1;
     evt.timestamp_ms += 120;
 
-    add_sensor2(&evt);
+    register_timestamp_sensor2(&evt);
 
     struct radar_display_data disp;
 
@@ -90,7 +89,7 @@ ZTEST(app_tests, test_computed_vehicle_status_normal_to_light_vehicle)
     evt.level = 1;
     evt.timestamp_ms += 120;
 
-    add_sensor2(&evt);
+    register_timestamp_sensor2(&evt);
 
     struct radar_display_data disp;
 
@@ -114,7 +113,7 @@ ZTEST(app_tests, test_computed_vehicle_status_attention_to_light_vehicle)
     evt.level = 1;
     evt.timestamp_ms += 50;
 
-    add_sensor2(&evt);
+    register_timestamp_sensor2(&evt);
     
     struct radar_display_data disp;
     
@@ -138,7 +137,7 @@ ZTEST(app_tests, test_computed_vehicle_status_infraction_to_light_vehicle)
     evt.level = 1;
     evt.timestamp_ms += 20;
 
-    add_sensor2(&evt);
+    register_timestamp_sensor2(&evt);
 
     struct radar_display_data disp;
 
@@ -163,7 +162,7 @@ ZTEST(app_tests, test_computed_vehicle_status_normal_to_heavy_vehicle)
     evt.level = 1;
     evt.timestamp_ms += 120;
 
-    add_sensor2(&evt);
+    register_timestamp_sensor2(&evt);
 
     struct radar_display_data disp;
 
@@ -188,7 +187,7 @@ ZTEST(app_tests, test_computed_vehicle_status_attention_to_heavy_vehicle)
     evt.level = 1;
     evt.timestamp_ms += 60;
 
-    add_sensor2(&evt);
+    register_timestamp_sensor2(&evt);
     
     struct radar_display_data disp;
     
@@ -213,7 +212,7 @@ ZTEST(app_tests, test_computed_vehicle_status_infraction_to_heavy_vehicle)
     evt.level = 1;
     evt.timestamp_ms += 20;
 
-    add_sensor2(&evt);
+    register_timestamp_sensor2(&evt);
 
     struct radar_display_data disp;
 

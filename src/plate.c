@@ -8,7 +8,14 @@ bool plate_is_valid_mercosul(const char *plate)
 	       plate_is_ur(plate) || plate_is_bo(plate);
 }
 
+/*
+	Cria um regex e valida, foi utilizada a biblioteca (https://man7.org/linux/man-pages/man3/regcomp.3.html)
 
+	@param plate placa de um veículo
+	@param pattern regex para validação
+
+	@return valida de plate está dentro do pattern
+*/
 static bool plate_match_pattern(const char *plate, const char *pattern)
 {
 	regex_t rx;

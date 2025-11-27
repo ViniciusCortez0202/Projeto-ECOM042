@@ -1,4 +1,4 @@
-# Install script for directory: /Users/viniciuscortez/zephyrproject/zephyr/subsys/logging/backends
+# Install script for directory: /Users/viniciuscortez/zephyrproject/zephyr/subsys/testsuite/ztest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/subsys/logging/backends/install_local_manifest.txt"
+  file(WRITE "/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/zephyr/subsys/testsuite/ztest/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

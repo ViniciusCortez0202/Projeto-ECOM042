@@ -17,8 +17,7 @@ void handler_plate_infraction()
 
 	int err;
 	const struct zbus_channel *chan;
-	k_msleep(1000);
-
+	
 	err = camera_api_capture(K_FOREVER);
 	if (err) {
 		LOG_ERR("Erro ao iniciar a camera. Erro: %d\n", err);

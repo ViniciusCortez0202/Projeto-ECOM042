@@ -37,8 +37,14 @@ west build -t run
 
 ```
 
+## Run for Tests
+```
+west build -b mps2/an385 test -p always
+west build -t run
 
-Saisa
+```
+
+Saidas
 **************
 - Logs trazem linhas como ``[RADAR] Veiculo=LEVE eixos=2 velocidade=95 limite=80 status=INFRACAO``.
 - Quando ha infracao, a camera simula captura de placa e publica em ``chan_camera_result``; placas invalidas representam falhas de OCR.

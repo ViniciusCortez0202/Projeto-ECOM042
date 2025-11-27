@@ -6,6 +6,8 @@
 #include "radar_control.h"
 #include "radar_display.h"
 
+#define VEHICLE_LENGTH_MM 5000
+
 LOG_MODULE_DECLARE(radar);
 
 enum vehicle_track_state {
@@ -35,7 +37,7 @@ static void vehicle_context_reset(struct vehicle_context *c)
 }
 
 // Calcula a velocidade média
-static int32_t compute_speed_kmh(uint32_t distance_mm, uint32_t delta_ms)
+int32_t compute_speed_kmh(uint32_t distance_mm, uint32_t delta_ms)
 {
 	if (delta_ms == 0) {
 		return 0;
@@ -44,20 +46,18 @@ static int32_t compute_speed_kmh(uint32_t distance_mm, uint32_t delta_ms)
 	return (int32_t)((distance_mm * 36U) / (delta_ms * 10U));
 }
 
-static void finalize_vehicle_work(struct k_work *work)
+int compute_vehicle_status(struct radar_display_data *disp)
 {
-	ARG_UNUSED(work);
-
 	/* Só finaliza se estiver acompanhando */
 	if (ctx.state != VEHICLE_STATE_TRACKING) {
-		return;
+		return -1;
 	}
 
 	/* Se nunca chegou no sensor 2, não dá pra calcular velocidade */
 	if (!ctx.sensor2_seen) {
 		LOG_WRN("Possível ruido");
 		vehicle_context_reset(&ctx);
-		return;
+		return -1;
 	}
 
 	uint32_t delta_ms = ctx.sensor2_time_ms - ctx.start_time_ms;
@@ -72,12 +72,12 @@ static void finalize_vehicle_work(struct k_work *work)
 	} else {
 		LOG_WRN("Possível ruido");
 		vehicle_context_reset(&ctx);
-		return;
+		return -1;
 	}
 
 	struct radar_evaluation_result res = radar_evaluate_speed(vtype, speed_kmh);
 
-	struct radar_display_data disp = {
+	*disp = (struct radar_display_data){
 		.type = vtype,
 		.axle_count = ctx.axle_count,
 		.delta_ms = delta_ms,
@@ -85,8 +85,17 @@ static void finalize_vehicle_work(struct k_work *work)
 		.limit_kmh = res.limit_kmh,
 		.status = res.status,
 	};
+	return 0;
+}
 
-	radar_display_show(&disp);
+static void finalize_vehicle_work(struct k_work *work)
+{
+	ARG_UNUSED(work);
+
+	struct radar_display_data disp;
+	if (compute_vehicle_status(&disp) == 0) {
+		radar_display_show(&disp);
+	}
 
 	vehicle_context_reset(&ctx);
 }
@@ -101,30 +110,56 @@ void radar_process_sensor_event(const struct sensor_event *evt)
 	switch (ctx.state) {
 	case VEHICLE_STATE_IDLE:
 		if (evt->sensor_id == 1 && evt->level == 1) {
-			ctx.state = VEHICLE_STATE_TRACKING;
-			ctx.axle_count = 1;
-			ctx.start_time_ms = evt->timestamp_ms;
-			ctx.sensor2_seen = false;
-		
+			init_context(evt);
+			printk("Logou eixo 1\n");
 			k_work_reschedule(&ctx.finalize_work, K_MSEC(radar_stop_timeout));
 		}
 		break;
 
 	case VEHICLE_STATE_TRACKING:
 		if (evt->sensor_id == 1 && evt->level == 1) {
-			ctx.axle_count++;
-			
+			add_axle();
+			printk("Logou eixo 1\n");
 			k_work_reschedule(&ctx.finalize_work, K_MSEC(radar_stop_timeout));
 		}
-		
+
 		if (evt->sensor_id == 2 && evt->level == 1 && !ctx.sensor2_seen) {
-			ctx.sensor2_seen = true;
-			ctx.sensor2_time_ms = evt->timestamp_ms;
-			radar_stop_timeout = evt->timestamp_ms - ctx.sensor2_time_ms + 50;
+			add_sensor2(evt);
 		}
 		break;
 	}
+}
 
+int64_t compute_timeout()
+{
+	uint32_t distance_mm = CONFIG_RADAR_SENSOR_DISTANCE_MM;
+	uint32_t delta_ms = ctx.sensor2_time_ms - ctx.start_time_ms;
+	int32_t speed_kmh = compute_speed_kmh(distance_mm, delta_ms);
+	return ((int64_t)VEHICLE_LENGTH_MM * 3600) / ((int64_t)speed_kmh * 1000);
+}
+
+int init_context(const struct sensor_event *evt)
+{
+	ctx.state = VEHICLE_STATE_TRACKING;
+	ctx.axle_count = 1;
+	ctx.start_time_ms = evt->timestamp_ms;
+	ctx.sensor2_seen = false;
+	return 0;
+}
+
+int add_axle()
+{
+	ctx.axle_count++;
+	return 0;
+}
+
+int add_sensor2(const struct sensor_event *evt)
+{
+	ctx.sensor2_seen = true;
+	ctx.sensor2_time_ms = evt->timestamp_ms;
+	radar_stop_timeout = compute_timeout();
+
+	return 0;
 }
 
 void radar_processing_init(void)

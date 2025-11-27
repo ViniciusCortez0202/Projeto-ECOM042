@@ -4,8 +4,8 @@
 
 bool plate_is_valid_mercosul(const char *plate)
 {
-	return plate_is_br(plate) || plate_is_ar(plate) || plate_is_py(plate) ||
-	       plate_is_uy(plate) || plate_is_bo(plate);
+	return plate_is_br(plate) || plate_is_ar(plate) || plate_is_pr(plate) ||
+	       plate_is_ur(plate) || plate_is_bo(plate);
 }
 
 
@@ -35,13 +35,13 @@ bool plate_is_ar(const char *plate)
 }
 
 /* Paraguai */
-bool plate_is_py(const char *plate)
+bool plate_is_pr(const char *plate)
 {
 	return plate_match_pattern(plate, "^([A-Z]{4} [0-9]{3}|[0-9]{3} [A-Z]{4})$");
 }
 
 /* Uruguai */
-bool plate_is_uy(const char *plate)
+bool plate_is_ur(const char *plate)
 {
 	return plate_match_pattern(plate, "^[A-Z]{3} [0-9]{4}$");
 }

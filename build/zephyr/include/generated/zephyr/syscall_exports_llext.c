@@ -7,6 +7,8 @@
  */
 
 /* Symbol declarations */
+extern void * const z_impl___ztest_set_test_phase;
+extern void * const z_impl___ztest_set_test_result;
 extern void * const z_impl_device_deinit;
 extern void * const z_impl_device_get_binding;
 extern void * const z_impl_device_get_by_dt_nodelabel;
@@ -127,6 +129,7 @@ extern void * const z_impl_log_frontend_filter_set;
 extern void * const z_impl_log_panic;
 extern void * const z_impl_log_process;
 extern void * const z_impl_sys_clock_hw_cycles_per_sec_runtime_get;
+extern void * const z_impl_sys_clock_tick_set;
 extern void * const z_impl_sys_csrand_get;
 extern void * const z_impl_sys_rand_get;
 extern void * const z_impl_uart_config_get;
@@ -159,12 +162,19 @@ extern void * const z_impl_z_log_msg_simple_create_2;
 extern void * const z_impl_z_log_msg_static_create;
 extern void * const z_impl_z_sys_mutex_kernel_lock;
 extern void * const z_impl_z_sys_mutex_kernel_unlock;
+extern void * const z_impl_z_test_1cpu_start;
+extern void * const z_impl_z_test_1cpu_stop;
 extern void * const z_impl_zephyr_fputc;
 extern void * const z_impl_zephyr_fwrite;
 extern void * const z_impl_zephyr_read_stdin;
 extern void * const z_impl_zephyr_write_stdout;
+extern void * const z_impl_ztest_run_test_suites;
+extern void * const z_impl_ztest_set_assert_valid;
+extern void * const z_impl_ztest_set_fault_valid;
 
 /* Exported symbols */
+EXPORT_SYMBOL(z_impl___ztest_set_test_phase);
+EXPORT_SYMBOL(z_impl___ztest_set_test_result);
 EXPORT_SYMBOL(z_impl_device_deinit);
 EXPORT_SYMBOL(z_impl_device_get_binding);
 EXPORT_SYMBOL(z_impl_device_get_by_dt_nodelabel);
@@ -285,6 +295,7 @@ EXPORT_SYMBOL(z_impl_log_frontend_filter_set);
 EXPORT_SYMBOL(z_impl_log_panic);
 EXPORT_SYMBOL(z_impl_log_process);
 EXPORT_SYMBOL(z_impl_sys_clock_hw_cycles_per_sec_runtime_get);
+EXPORT_SYMBOL(z_impl_sys_clock_tick_set);
 EXPORT_SYMBOL(z_impl_sys_csrand_get);
 EXPORT_SYMBOL(z_impl_sys_rand_get);
 EXPORT_SYMBOL(z_impl_uart_config_get);
@@ -317,7 +328,12 @@ EXPORT_SYMBOL(z_impl_z_log_msg_simple_create_2);
 EXPORT_SYMBOL(z_impl_z_log_msg_static_create);
 EXPORT_SYMBOL(z_impl_z_sys_mutex_kernel_lock);
 EXPORT_SYMBOL(z_impl_z_sys_mutex_kernel_unlock);
+EXPORT_SYMBOL(z_impl_z_test_1cpu_start);
+EXPORT_SYMBOL(z_impl_z_test_1cpu_stop);
 EXPORT_SYMBOL(z_impl_zephyr_fputc);
 EXPORT_SYMBOL(z_impl_zephyr_fwrite);
 EXPORT_SYMBOL(z_impl_zephyr_read_stdin);
 EXPORT_SYMBOL(z_impl_zephyr_write_stdout);
+EXPORT_SYMBOL(z_impl_ztest_run_test_suites);
+EXPORT_SYMBOL(z_impl_ztest_set_assert_valid);
+EXPORT_SYMBOL(z_impl_ztest_set_fault_valid);

@@ -58,6 +58,7 @@ _vector_end = .;
 . = ALIGN(4);
 KEEP(*(.gnu.linkonce.irq_vector_table*))
  _vector_end = .;
+. = MAX(ABSOLUTE(.), 0x400);
  } > FLASH
     text :
  {

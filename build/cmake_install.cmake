@@ -1,4 +1,4 @@
-# Install script for directory: /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto
+# Install script for directory: /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

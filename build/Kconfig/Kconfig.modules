@@ -298,7 +298,7 @@ config ZEPHYR_ZCBOR_MODULE
 	bool
 	default y
 endmenu
-menu "camera_service (/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/modules/camera_service)"
+menu "camera_service (/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/test/../modules/camera_service)"
 osource "/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/modules/camera_service/Kconfig.camera_service"
 config ZEPHYR_CAMERA_SERVICE_MODULE
 	bool

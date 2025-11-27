@@ -7,8 +7,8 @@ bool plate_is_valid_mercosul(const char *plate);
 
 bool plate_is_br(const char *plate);
 bool plate_is_ar(const char *plate);
-bool plate_is_py(const char *plate);
-bool plate_is_uy(const char *plate);
+bool plate_is_pr(const char *plate);
+bool plate_is_ur(const char *plate);
 bool plate_is_bo(const char *plate);
 
 #endif /* PLATE_H */

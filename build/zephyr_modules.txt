@@ -52,5 +52,5 @@
 "trusted-firmware-m":"/Users/viniciuscortez/zephyrproject/modules/tee/tf-m/trusted-firmware-m":"${ZEPHYR_TRUSTED_FIRMWARE_M_CMAKE_DIR}"
 "uoscore-uedhoc":"/Users/viniciuscortez/zephyrproject/modules/lib/uoscore-uedhoc":"${ZEPHYR_UOSCORE_UEDHOC_CMAKE_DIR}"
 "zcbor":"/Users/viniciuscortez/zephyrproject/modules/lib/zcbor":"${ZEPHYR_ZCBOR_CMAKE_DIR}"
-"camera_service":"/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/modules/camera_service":"/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/modules/camera_service"
+"camera_service":"/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/test/../modules/camera_service":"/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/modules/camera_service"
 "nrf_hw_models":"/Users/viniciuscortez/zephyrproject/modules/bsim_hw_models/nrf_hw_models":"/Users/viniciuscortez/zephyrproject/modules/bsim_hw_models/nrf_hw_models"

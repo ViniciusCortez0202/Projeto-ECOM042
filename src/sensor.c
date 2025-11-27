@@ -68,7 +68,7 @@ static void sensor_thread(void *arg1, void *arg2, void *arg3)
 }
 
 K_THREAD_DEFINE(sensor_thread_id,
-                1024,
+                2048,
                 sensor_thread,
                 NULL, NULL, NULL,
                 5, 0, 0);

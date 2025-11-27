@@ -2068,7 +2068,6 @@
 /Users/viniciuscortez/zephyrproject/zephyr/modules/trusted-firmware-m/Kconfig.tfm.partitions
 /Users/viniciuscortez/zephyrproject/zephyr/modules/uoscore-uedhoc/Kconfig
 /Users/viniciuscortez/zephyrproject/zephyr/modules/zcbor/Kconfig
-/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/Kconfig
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/Kconfig/Kconfig.dts
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/Kconfig/Kconfig.modules
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/Kconfig/arch/Kconfig
@@ -2079,6 +2078,7 @@
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/Kconfig/soc/Kconfig.defconfig
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/build/Kconfig/soc/Kconfig.soc
 /Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/modules/camera_service/Kconfig.camera_service
+/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/test/Kconfig
 /Users/viniciuscortez/zephyrproject/zephyr/soc/Kconfig
 /Users/viniciuscortez/zephyrproject/zephyr/soc/Kconfig.v2
 /Users/viniciuscortez/zephyrproject/zephyr/soc/adi/max32/Kconfig

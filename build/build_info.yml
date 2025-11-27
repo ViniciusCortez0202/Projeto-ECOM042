@@ -1,7 +1,7 @@
 cmake:
   application:
-    configuration-dir: '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto'
-    source-dir: '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto'
+    configuration-dir: '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/test'
+    source-dir: '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/test'
   board:
     name: 'mps2'
     path:
@@ -42,9 +42,9 @@ cmake:
   kconfig:
     files:
      - '/Users/viniciuscortez/zephyrproject/zephyr/boards/arm/mps2/mps2_an385_defconfig'
-     - '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/prj.conf'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/test/prj.conf'
     user-files:
-     - '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/prj.conf'
+     - '/Users/viniciuscortez/zephyrproject/zephyr/samples/projeto/test/prj.conf'
   toolchain:
     name: 'zephyr'
     path: '/Users/viniciuscortez/zephyr-sdk-0.17.1'
@@ -53,6 +53,6 @@ cmake:
     zephyr-base: '/Users/viniciuscortez/zephyrproject/zephyr'
 version: '0.1.0'
 west:
-  command: '/Users/viniciuscortez/miniconda3/bin/west build -t run'
+  command: '/Users/viniciuscortez/miniconda3/bin/west build -b mps2/an385 test -p always'
   topdir: '/Users/viniciuscortez/zephyrproject'
   version: '1.5.0'

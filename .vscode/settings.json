@@ -4,6 +4,8 @@
         "radar_processing.h": "c",
         "radar_display.h": "c",
         "vehicle_status_service.h": "c",
-        "vehicle_infraction_plate.h": "c"
+        "vehicle_infraction_plate.h": "c",
+        "plate.h": "c",
+        "radar_control.h": "c"
     }
 }
